@@ -13,6 +13,7 @@ const defaultProps: TTemplate = {
 
 export function Template(props: TTemplate = defaultProps) {
   const { data, children } = props;
+  console.log("data:", data);
 
   return (
     <div>

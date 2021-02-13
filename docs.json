@@ -1,0 +1,6169 @@
+{
+	"id": 0,
+	"name": "Edo",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "components",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 57,
+					"name": "SemanticElement",
+					"kind": 2,
+					"kindString": "Namespace",
+					"flags": {},
+					"children": [
+						{
+							"id": 58,
+							"name": "defaultProps",
+							"kind": 32,
+							"kindString": "Variable",
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"id": 60,
+								"name": "TSemanticElement"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Variables",
+							"kind": 32,
+							"children": [
+								58
+							]
+						}
+					]
+				},
+				{
+					"id": 90,
+					"name": "TImage",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "Defines the Image interface."
+					},
+					"children": [
+						{
+							"id": 92,
+							"name": "alt",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/content/Image/Image.tsx",
+									"line": 8,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 94,
+							"name": "height",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/content/Image/Image.tsx",
+									"line": 10,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 91,
+							"name": "src",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/content/Image/Image.tsx",
+									"line": 7,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 93,
+							"name": "width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/content/Image/Image.tsx",
+									"line": 9,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								92,
+								94,
+								91,
+								93
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/content/Image/Image.tsx",
+							"line": 6,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 8,
+					"name": "TLink",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "Defines the Link type."
+					},
+					"children": [
+						{
+							"id": 11,
+							"name": "children",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The content of the link.\nWhen not defined the `title` will be used as `content`."
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Link/Link.tsx",
+									"line": 23,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ReactNode"
+							}
+						},
+						{
+							"id": 10,
+							"name": "href",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The URL of the link.\nWhen not defined the `title` will be transformed into an URL and used as `href`."
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Link/Link.tsx",
+									"line": 18,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 9,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"comment": {
+								"shortText": "The title of the link."
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Link/Link.tsx",
+									"line": 13,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								11,
+								10,
+								9
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Link/Link.tsx",
+							"line": 9,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 17,
+					"name": "TMenu",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 18,
+							"name": "items",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 12,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 32,
+									"name": "TMenuSimpleItem"
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 37,
+								"name": "TMenuSimple.items"
+							}
+						},
+						{
+							"id": 19,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 13,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 20,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 21,
+											"name": "isSectionLink",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+													"line": 14,
+													"character": 17
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												21
+											]
+										}
+									]
+								}
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 38,
+								"name": "TMenuSimple.options"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								18,
+								19
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/Menu.tsx",
+							"line": 13,
+							"character": 22
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 36,
+							"name": "TMenuSimple"
+						},
+						{
+							"type": "reference",
+							"id": 26,
+							"name": "TMenuAria"
+						}
+					]
+				},
+				{
+					"id": 26,
+					"name": "TMenuAria",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuAria.tsx",
+							"line": 8,
+							"character": 26
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 17,
+							"name": "TMenu"
+						}
+					]
+				},
+				{
+					"id": 36,
+					"name": "TMenuSimple",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 37,
+							"name": "items",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 12,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"id": 32,
+									"name": "TMenuSimpleItem"
+								}
+							}
+						},
+						{
+							"id": 38,
+							"name": "options",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 13,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 39,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 40,
+											"name": "isSectionLink",
+											"kind": 1024,
+											"kindString": "Property",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+													"line": 14,
+													"character": 17
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"kind": 1024,
+											"children": [
+												40
+											]
+										}
+									]
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								37,
+								38
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 11,
+							"character": 28
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 17,
+							"name": "TMenu"
+						}
+					]
+				},
+				{
+					"id": 32,
+					"name": "TMenuSimpleItem",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 35,
+							"name": "children",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 8,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						},
+						{
+							"id": 34,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 7,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 33,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+									"line": 6,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 31,
+								"name": "TMenuSimpleItemVariants"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								35,
+								34,
+								33
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 5,
+							"character": 32
+						}
+					]
+				},
+				{
+					"id": 60,
+					"name": "TSemanticElement",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 64,
+							"name": "children",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+									"line": 19,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ReactNode"
+							}
+						},
+						{
+							"id": 65,
+							"name": "className",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+									"line": 20,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 63,
+							"name": "displayTitle",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+									"line": 18,
+									"character": 14
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						},
+						{
+							"id": 62,
+							"name": "title",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+									"line": 17,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 61,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+									"line": 16,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 59,
+								"name": "TSemanticElementVariants"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								64,
+								65,
+								63,
+								62,
+								61
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+							"line": 15,
+							"character": 33
+						}
+					]
+				},
+				{
+					"id": 31,
+					"name": "TMenuSimpleItemVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 3,
+							"character": 35
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "section"
+							},
+							{
+								"type": "literal",
+								"value": "item"
+							}
+						]
+					}
+				},
+				{
+					"id": 16,
+					"name": "TMenuVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/Menu.tsx",
+							"line": 11,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "aria"
+							},
+							{
+								"type": "literal",
+								"value": "simple"
+							}
+						]
+					}
+				},
+				{
+					"id": 59,
+					"name": "TSemanticElementVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+							"line": 5,
+							"character": 36
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "article"
+							},
+							{
+								"type": "literal",
+								"value": "aside"
+							},
+							{
+								"type": "literal",
+								"value": "footer"
+							},
+							{
+								"type": "literal",
+								"value": "header"
+							},
+							{
+								"type": "literal",
+								"value": "heading"
+							},
+							{
+								"type": "literal",
+								"value": "nav"
+							},
+							{
+								"type": "literal",
+								"value": "section"
+							},
+							{
+								"type": "literal",
+								"value": "main"
+							}
+						]
+					}
+				},
+				{
+					"id": 22,
+					"name": "defaultMenu",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/Menu.tsx",
+							"line": 15,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 17,
+						"name": "TMenu"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 27,
+					"name": "defaultMenuAria",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuAria.tsx",
+							"line": 10,
+							"character": 28
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 26,
+						"name": "TMenuAria"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 42,
+					"name": "defaultMenuSimple",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 24,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 36,
+						"name": "TMenuSimple"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 41,
+					"name": "defaultMenuSimpleItem",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 18,
+							"character": 34
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 32,
+						"name": "TMenuSimpleItem"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 66,
+					"name": "Article",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Article.tsx",
+							"line": 8,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 67,
+							"name": "Article",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 68,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 69,
+					"name": "Aside",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Aside.tsx",
+							"line": 8,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 70,
+							"name": "Aside",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 71,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 72,
+					"name": "Footer",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Footer.tsx",
+							"line": 8,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 73,
+							"name": "Footer",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 74,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 75,
+					"name": "Header",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Header.tsx",
+							"line": 8,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 76,
+							"name": "Header",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 77,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 87,
+					"name": "Image",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/content/Image/Image.tsx",
+							"line": 17,
+							"character": 21
+						}
+					],
+					"signatures": [
+						{
+							"id": 88,
+							"name": "Image",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Displays an image using the [`next/image`](https://nextjs.org/docs/basic-features/image-optimization) library."
+							},
+							"parameters": [
+								{
+									"id": 89,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 90,
+										"name": "TImage"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 5,
+					"name": "Link",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Link/Link.tsx",
+							"line": 38,
+							"character": 20
+						}
+					],
+					"signatures": [
+						{
+							"id": 6,
+							"name": "Link",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Displays a link."
+							},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "The link properties."
+									},
+									"type": {
+										"type": "reference",
+										"id": 8,
+										"name": "TLink"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 78,
+					"name": "Main",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Main.tsx",
+							"line": 8,
+							"character": 20
+						}
+					],
+					"signatures": [
+						{
+							"id": 79,
+							"name": "Main",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 80,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 12,
+					"name": "Menu",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/Menu.tsx",
+							"line": 20,
+							"character": 20
+						}
+					],
+					"signatures": [
+						{
+							"id": 13,
+							"name": "Menu",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 14,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 16,
+										"name": "TMenuVariants"
+									}
+								},
+								{
+									"id": 15,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 17,
+										"name": "TMenu"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "MenuAria",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuAria.tsx",
+							"line": 15,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 24,
+							"name": "MenuAria",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 25,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 28,
+					"name": "MenuSimple",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/navigation/Menu/MenuSimple.tsx",
+							"line": 31,
+							"character": 26
+						}
+					],
+					"signatures": [
+						{
+							"id": 29,
+							"name": "MenuSimple",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 30,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 36,
+										"name": "TMenuSimple"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 81,
+					"name": "Nav",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Nav.tsx",
+							"line": 8,
+							"character": 19
+						}
+					],
+					"signatures": [
+						{
+							"id": 82,
+							"name": "Nav",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 83,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 84,
+					"name": "Section",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/Section.tsx",
+							"line": 8,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 85,
+							"name": "Section",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 86,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				},
+				{
+					"id": 43,
+					"name": "SemanticElement",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/semantic-element/SemanticElement/SemanticElement.tsx",
+							"line": 34,
+							"character": 31
+						}
+					],
+					"signatures": [
+						{
+							"id": 44,
+							"name": "SemanticElement",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {},
+							"parameters": [
+								{
+									"id": 45,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 60,
+										"name": "TSemanticElement"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "reflection",
+										"declaration": {
+											"id": 46,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"children": [
+												{
+													"id": 47,
+													"name": "className",
+													"kind": 1024,
+													"kindString": "Property",
+													"flags": {},
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													},
+													"defaultValue": "..."
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"kind": 1024,
+													"children": [
+														47
+													]
+												}
+											]
+										}
+									},
+									{
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "reflection",
+												"declaration": {
+													"id": 48,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"signatures": [
+														{
+															"id": 49,
+															"name": "__type",
+															"kind": 4096,
+															"kindString": "Call signature",
+															"flags": {},
+															"parameters": [
+																{
+																	"id": 50,
+																	"name": "props",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "any"
+																	},
+																	{
+																		"type": "union",
+																		"types": [
+																			{
+																				"type": "intrinsic",
+																				"name": "string"
+																			},
+																			{
+																				"type": "unknown",
+																				"name": "(props: any) => ReactElement<any, string | ... | (new (props: any) => Component<any, any, any>)>"
+																			},
+																			{
+																				"type": "reflection",
+																				"declaration": {
+																					"id": 51,
+																					"name": "__type",
+																					"kind": 512,
+																					"kindString": "Constructor",
+																					"flags": {},
+																					"signatures": [
+																						{
+																							"id": 52,
+																							"name": "__type",
+																							"kind": 16384,
+																							"kindString": "Constructor signature",
+																							"flags": {},
+																							"parameters": [
+																								{
+																									"id": 53,
+																									"name": "props",
+																									"kind": 32768,
+																									"kindString": "Parameter",
+																									"flags": {},
+																									"type": {
+																										"type": "intrinsic",
+																										"name": "any"
+																									}
+																								}
+																							],
+																							"type": {
+																								"type": "reference",
+																								"typeArguments": [
+																									{
+																										"type": "intrinsic",
+																										"name": "any"
+																									},
+																									{
+																										"type": "intrinsic",
+																										"name": "any"
+																									},
+																									{
+																										"type": "intrinsic",
+																										"name": "any"
+																									}
+																								],
+																								"name": "Component"
+																							}
+																						}
+																					]
+																				}
+																			}
+																		]
+																	}
+																],
+																"name": "ReactElement"
+															}
+														}
+													]
+												}
+											},
+											{
+												"type": "reflection",
+												"declaration": {
+													"id": 54,
+													"name": "__type",
+													"kind": 512,
+													"kindString": "Constructor",
+													"flags": {},
+													"signatures": [
+														{
+															"id": 55,
+															"name": "__type",
+															"kind": 16384,
+															"kindString": "Constructor signature",
+															"flags": {},
+															"parameters": [
+																{
+																	"id": 56,
+																	"name": "props",
+																	"kind": 32768,
+																	"kindString": "Parameter",
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																}
+															],
+															"type": {
+																"type": "reference",
+																"typeArguments": [
+																	{
+																		"type": "intrinsic",
+																		"name": "any"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "any"
+																	},
+																	{
+																		"type": "intrinsic",
+																		"name": "any"
+																	}
+																],
+																"name": "Component"
+															}
+														}
+													]
+												}
+											}
+										]
+									}
+								],
+								"name": "ReactElement"
+							}
+						}
+					]
+				},
+				{
+					"id": 3,
+					"name": "TypographySetup",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/components/typography/TypographySetup/TypographySetup.tsx",
+							"line": 9,
+							"character": 31
+						}
+					],
+					"signatures": [
+						{
+							"id": 4,
+							"name": "TypographySetup",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Sets up typography"
+							},
+							"type": {
+								"type": "reference",
+								"name": "Element"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Namespaces",
+					"kind": 2,
+					"children": [
+						57
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						90,
+						8,
+						17,
+						26,
+						36,
+						32,
+						60
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						31,
+						16,
+						59
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						22,
+						27,
+						42,
+						41
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						66,
+						69,
+						72,
+						75,
+						87,
+						5,
+						78,
+						12,
+						23,
+						28,
+						81,
+						84,
+						43,
+						3
+					]
+				}
+			],
+			"categories": [
+				{
+					"title": "Content",
+					"children": [
+						87
+					]
+				},
+				{
+					"title": "Navigation",
+					"children": [
+						5,
+						23
+					]
+				},
+				{
+					"title": "Other",
+					"children": [
+						57,
+						90,
+						8,
+						17,
+						26,
+						36,
+						32,
+						60,
+						31,
+						16,
+						59,
+						22,
+						27,
+						42,
+						41,
+						12,
+						28
+					]
+				},
+				{
+					"title": "Semantic elements",
+					"children": [
+						66,
+						69,
+						72,
+						75,
+						78,
+						81,
+						84,
+						43
+					]
+				},
+				{
+					"title": "Typography",
+					"children": [
+						3
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/components/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "tokens",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 276,
+					"name": "TAlignment",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 279,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/alignment.ts",
+									"line": 11,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						},
+						{
+							"id": 277,
+							"name": "modifier",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/alignment.ts",
+									"line": 9,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 274,
+								"name": "TAlignmentModifiers"
+							}
+						},
+						{
+							"id": 278,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/alignment.ts",
+									"line": 10,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 275,
+								"name": "TAlignmentValue"
+							}
+						},
+						{
+							"id": 280,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "justify"
+									},
+									{
+										"type": "literal",
+										"value": "align"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 273,
+											"name": "TAlignmentVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								279,
+								277,
+								278,
+								280
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 8,
+							"character": 27
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 273,
+									"name": "TAlignmentVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 124,
+					"name": "TBreakpoint",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 125,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/breakpoints/breakpoints.ts",
+									"line": 7,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 126,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "mobile"
+									},
+									{
+										"type": "literal",
+										"value": "tablet"
+									},
+									{
+										"type": "literal",
+										"value": "laptop"
+									},
+									{
+										"type": "literal",
+										"value": "desktop"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 122,
+											"name": "TBreakpointVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								125,
+								126
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/breakpoints.ts",
+							"line": 6,
+							"character": 28
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 122,
+									"name": "TBreakpointVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 222,
+					"name": "TColor",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 223,
+							"name": "name",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/colors/colors.ts",
+									"line": 6,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 224,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/colors/colors.ts",
+									"line": 7,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 225,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "text"
+									},
+									{
+										"type": "literal",
+										"value": "background"
+									},
+									{
+										"type": "literal",
+										"value": "highlight"
+									},
+									{
+										"type": "literal",
+										"value": "shade"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 221,
+											"name": "TColorVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								223,
+								224,
+								225
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colors.ts",
+							"line": 5,
+							"character": 23
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 221,
+									"name": "TColorVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 230,
+					"name": "TColorPair",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 232,
+							"name": "background",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/colors/colorPairs.ts",
+									"line": 11,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 221,
+								"name": "TColorVariants"
+							}
+						},
+						{
+							"id": 231,
+							"name": "text",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/colors/colorPairs.ts",
+									"line": 10,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 221,
+								"name": "TColorVariants"
+							}
+						},
+						{
+							"id": 233,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "default"
+									},
+									{
+										"type": "literal",
+										"value": "inverted"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 229,
+											"name": "TColorPairVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								232,
+								231,
+								233
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colorPairs.ts",
+							"line": 9,
+							"character": 27
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 229,
+									"name": "TColorPairVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 140,
+					"name": "TFont",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 141,
+							"name": "fontFamily",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/fonts/fonts.ts",
+									"line": 14,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 143,
+							"name": "fontStyle",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/fonts/fonts.ts",
+									"line": 16,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 142,
+							"name": "fontWeight",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/fonts/fonts.ts",
+									"line": 15,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "ReactText"
+							}
+						},
+						{
+							"id": 144,
+							"name": "letterSpacing",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/fonts/fonts.ts",
+									"line": 17,
+									"character": 15
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 145,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "Default"
+									},
+									{
+										"type": "literal",
+										"value": "Nimbus Sans Light"
+									},
+									{
+										"type": "literal",
+										"value": "Nimbus Sans Regular"
+									},
+									{
+										"type": "literal",
+										"value": "Nimbus Sans Medium"
+									},
+									{
+										"type": "literal",
+										"value": "Nimbus Sans Bold"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 139,
+											"name": "TFontVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								141,
+								143,
+								142,
+								144,
+								145
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/fonts.ts",
+							"line": 13,
+							"character": 22
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 139,
+									"name": "TFontVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 240,
+					"name": "TGrid",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 244,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/grid.ts",
+									"line": 9,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						},
+						{
+							"id": 241,
+							"name": "columns",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/grid.ts",
+									"line": 6,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 242,
+							"name": "gap",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/grid.ts",
+									"line": 7,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 243,
+							"name": "spacing",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/grid.ts",
+									"line": 8,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								244,
+								241,
+								242,
+								243
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/grid.ts",
+							"line": 5,
+							"character": 22
+						}
+					]
+				},
+				{
+					"id": 160,
+					"name": "THeadingSizes",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 163,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+									"line": 9,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Object"
+							}
+						},
+						{
+							"id": 162,
+							"name": "scale",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+									"line": 8,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 188,
+								"name": "TScale"
+							}
+						},
+						{
+							"id": 161,
+							"name": "values",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+									"line": 7,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								163,
+								162,
+								161
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+							"line": 6,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 173,
+					"name": "TLinearScale",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 174,
+							"name": "base",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/scale/linearScale/linearScale.ts",
+									"line": 2,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 175,
+							"name": "step",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/scale/linearScale/linearScale.ts",
+									"line": 3,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								174,
+								175
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/linearScale/linearScale.ts",
+							"line": 1,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 180,
+					"name": "TModularScale",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 181,
+							"name": "base",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/scale/modularScale/modularScale.ts",
+									"line": 2,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						},
+						{
+							"id": 182,
+							"name": "ratio",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/scale/modularScale/modularScale.ts",
+									"line": 3,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								181,
+								182
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/modularScale/modularScale.ts",
+							"line": 1,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 188,
+					"name": "TScale",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 189,
+							"name": "value",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isOptional": true
+							},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/scale/scale.ts",
+									"line": 6,
+									"character": 7
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 190,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "linear"
+									},
+									{
+										"type": "literal",
+										"value": "modular"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 187,
+											"name": "TScaleVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								189,
+								190
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/scale.ts",
+							"line": 5,
+							"character": 23
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 187,
+									"name": "TScaleVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 260,
+					"name": "TSpacing",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 263,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/spacing.ts",
+									"line": 11,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						},
+						{
+							"id": 261,
+							"name": "modifier",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/spacing.ts",
+									"line": 9,
+									"character": 10
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 259,
+								"name": "TSpacingModifiers"
+							}
+						},
+						{
+							"id": 262,
+							"name": "values",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/layout/spacing.ts",
+									"line": 10,
+									"character": 8
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "number"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								]
+							}
+						},
+						{
+							"id": 264,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "margin"
+									},
+									{
+										"type": "literal",
+										"value": "padding"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 258,
+											"name": "TSpacingVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								263,
+								261,
+								262,
+								264
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/spacing.ts",
+							"line": 8,
+							"character": 25
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 258,
+									"name": "TSpacingVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 213,
+					"name": "TText",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 214,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/text/text.ts",
+									"line": 7,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						},
+						{
+							"id": 215,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "literal",
+										"value": "body"
+									},
+									{
+										"type": "literal",
+										"value": "title"
+									},
+									{
+										"type": "literal",
+										"value": "default"
+									},
+									{
+										"type": "literal",
+										"value": "longform"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 212,
+											"name": "TTextVariants"
+										}
+									}
+								]
+							},
+							"inheritedFrom": {
+								"type": "reference",
+								"id": 96,
+								"name": "TToken.variant"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								214,
+								215
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/text/text.ts",
+							"line": 6,
+							"character": 22
+						}
+					],
+					"extendedTypes": [
+						{
+							"type": "reference",
+							"id": 95,
+							"typeArguments": [
+								{
+									"type": "reference",
+									"id": 212,
+									"name": "TTextVariants"
+								}
+							],
+							"name": "TToken"
+						}
+					]
+				},
+				{
+					"id": 95,
+					"name": "TToken",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"children": [
+						{
+							"id": 96,
+							"name": "variant",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/settings/settings.ts",
+									"line": 2,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"name": "Variant"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"name": "Variant"
+										}
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								96
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/settings/settings.ts",
+							"line": 1,
+							"character": 23
+						}
+					],
+					"typeParameter": [
+						{
+							"id": 97,
+							"name": "Variant",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"extendedBy": [
+						{
+							"type": "reference",
+							"id": 124,
+							"name": "TBreakpoint"
+						},
+						{
+							"type": "reference",
+							"id": 140,
+							"name": "TFont"
+						},
+						{
+							"type": "reference",
+							"id": 188,
+							"name": "TScale"
+						},
+						{
+							"type": "reference",
+							"id": 213,
+							"name": "TText"
+						},
+						{
+							"type": "reference",
+							"id": 222,
+							"name": "TColor"
+						},
+						{
+							"type": "reference",
+							"id": 230,
+							"name": "TColorPair"
+						},
+						{
+							"type": "reference",
+							"id": 260,
+							"name": "TSpacing"
+						},
+						{
+							"type": "reference",
+							"id": 276,
+							"name": "TAlignment"
+						}
+					]
+				},
+				{
+					"id": 197,
+					"name": "TTypographicGrid",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {},
+					"comment": {
+						"shortText": "Defines the typographic grid type."
+					},
+					"children": [
+						{
+							"id": 200,
+							"name": "as",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+									"line": 13,
+									"character": 4
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						},
+						{
+							"id": 198,
+							"name": "fontSizes",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+									"line": 11,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 154,
+								"name": "TFontSizes"
+							}
+						},
+						{
+							"id": 199,
+							"name": "lineHeight",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+									"line": 12,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								200,
+								198,
+								199
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+							"line": 10,
+							"character": 33
+						}
+					]
+				},
+				{
+					"id": 274,
+					"name": "TAlignmentModifiers",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 5,
+							"character": 31
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "items"
+							},
+							{
+								"type": "literal",
+								"value": "self"
+							}
+						]
+					}
+				},
+				{
+					"id": 272,
+					"name": "TAlignmentReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 3,
+							"character": 32
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 110,
+						"name": "TTokenReturnTypes"
+					}
+				},
+				{
+					"id": 275,
+					"name": "TAlignmentValue",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 6,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "start"
+							},
+							{
+								"type": "literal",
+								"value": "end"
+							},
+							{
+								"type": "literal",
+								"value": "center"
+							},
+							{
+								"type": "literal",
+								"value": "stretch"
+							}
+						]
+					}
+				},
+				{
+					"id": 273,
+					"name": "TAlignmentVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 4,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "justify"
+							},
+							{
+								"type": "literal",
+								"value": "align"
+							}
+						]
+					}
+				},
+				{
+					"id": 123,
+					"name": "TBreakpointReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/breakpoints.ts",
+							"line": 4,
+							"character": 33
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 109,
+						"name": "TTokenReturnTypeString"
+					}
+				},
+				{
+					"id": 122,
+					"name": "TBreakpointVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/breakpoints.ts",
+							"line": 3,
+							"character": 31
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "mobile"
+							},
+							{
+								"type": "literal",
+								"value": "tablet"
+							},
+							{
+								"type": "literal",
+								"value": "laptop"
+							},
+							{
+								"type": "literal",
+								"value": "desktop"
+							}
+						]
+					}
+				},
+				{
+					"id": 227,
+					"name": "TColorPairReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colorPairs.ts",
+							"line": 4,
+							"character": 32
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 108,
+						"name": "TTokenReturnTypeObject"
+					}
+				},
+				{
+					"id": 229,
+					"name": "TColorPairVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colorPairs.ts",
+							"line": 7,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "default"
+							},
+							{
+								"type": "literal",
+								"value": "inverted"
+							}
+						]
+					}
+				},
+				{
+					"id": 221,
+					"name": "TColorVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colors.ts",
+							"line": 3,
+							"character": 26
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "background"
+							},
+							{
+								"type": "literal",
+								"value": "text"
+							},
+							{
+								"type": "literal",
+								"value": "highlight"
+							},
+							{
+								"type": "literal",
+								"value": "shade"
+							}
+						]
+					}
+				},
+				{
+					"id": 137,
+					"name": "TFontReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/fonts.ts",
+							"line": 3,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 108,
+						"name": "TTokenReturnTypeObject"
+					}
+				},
+				{
+					"id": 154,
+					"name": "TFontSizes",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fontSizes/fontSizes.ts",
+							"line": 6,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "number"
+						}
+					}
+				},
+				{
+					"id": 152,
+					"name": "TFontSizesReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fontSizes/fontSizes.ts",
+							"line": 3,
+							"character": 32
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 108,
+						"name": "TTokenReturnTypeObject"
+					}
+				},
+				{
+					"id": 139,
+					"name": "TFontVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/fonts.ts",
+							"line": 6,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "Default"
+							},
+							{
+								"type": "literal",
+								"value": "Nimbus Sans Light"
+							},
+							{
+								"type": "literal",
+								"value": "Nimbus Sans Regular"
+							},
+							{
+								"type": "literal",
+								"value": "Nimbus Sans Medium"
+							},
+							{
+								"type": "literal",
+								"value": "Nimbus Sans Bold"
+							}
+						]
+					}
+				},
+				{
+					"id": 239,
+					"name": "TGridReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/grid.ts",
+							"line": 3,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 110,
+						"name": "TTokenReturnTypes"
+					}
+				},
+				{
+					"id": 159,
+					"name": "THeadingSizesReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+							"line": 4,
+							"character": 35
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 108,
+						"name": "TTokenReturnTypeObject"
+					}
+				},
+				{
+					"id": 187,
+					"name": "TScaleVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/scale.ts",
+							"line": 3,
+							"character": 26
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "linear"
+							},
+							{
+								"type": "literal",
+								"value": "modular"
+							}
+						]
+					}
+				},
+				{
+					"id": 259,
+					"name": "TSpacingModifiers",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/spacing.ts",
+							"line": 6,
+							"character": 29
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "all"
+							},
+							{
+								"type": "literal",
+								"value": "top"
+							},
+							{
+								"type": "literal",
+								"value": "right"
+							},
+							{
+								"type": "literal",
+								"value": "bottom"
+							},
+							{
+								"type": "literal",
+								"value": "left"
+							}
+						]
+					}
+				},
+				{
+					"id": 257,
+					"name": "TSpacingReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/spacing.ts",
+							"line": 3,
+							"character": 30
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 110,
+						"name": "TTokenReturnTypes"
+					}
+				},
+				{
+					"id": 258,
+					"name": "TSpacingVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/spacing.ts",
+							"line": 5,
+							"character": 28
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "margin"
+							},
+							{
+								"type": "literal",
+								"value": "padding"
+							}
+						]
+					}
+				},
+				{
+					"id": 121,
+					"name": "TStyle",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useStyle.ts",
+							"line": 3,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 211,
+					"name": "TTextReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/text/text.ts",
+							"line": 3,
+							"character": 27
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 110,
+						"name": "TTokenReturnTypes"
+					}
+				},
+				{
+					"id": 212,
+					"name": "TTextVariants",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/text/text.ts",
+							"line": 4,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "default"
+							},
+							{
+								"type": "literal",
+								"value": "body"
+							},
+							{
+								"type": "literal",
+								"value": "longform"
+							},
+							{
+								"type": "literal",
+								"value": "title"
+							}
+						]
+					}
+				},
+				{
+					"id": 108,
+					"name": "TTokenReturnTypeObject",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useReturnTypes.ts",
+							"line": 4,
+							"character": 34
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "Object"
+					}
+				},
+				{
+					"id": 109,
+					"name": "TTokenReturnTypeString",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useReturnTypes.ts",
+							"line": 5,
+							"character": 34
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "String"
+					}
+				},
+				{
+					"id": 110,
+					"name": "TTokenReturnTypes",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useReturnTypes.ts",
+							"line": 6,
+							"character": 29
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"name": "Object"
+							},
+							{
+								"type": "reference",
+								"name": "String"
+							}
+						]
+					}
+				},
+				{
+					"id": 196,
+					"name": "TTypographicGridReturnType",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+							"line": 4,
+							"character": 38
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 110,
+						"name": "TTokenReturnTypes"
+					}
+				},
+				{
+					"id": 281,
+					"name": "alignment",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/alignment.ts",
+							"line": 14,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 276,
+						"name": "TAlignment"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 127,
+					"name": "breakpoints",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/breakpoints.ts",
+							"line": 10,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"id": 124,
+							"name": "TBreakpoint"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 228,
+					"name": "colorPairDefaultReturnType",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colorPairs.ts",
+							"line": 5,
+							"character": 39
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ObjectConstructor"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 234,
+					"name": "colorPairs",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colorPairs.ts",
+							"line": 26,
+							"character": 23
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"id": 230,
+							"name": "TColorPair"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 226,
+					"name": "colors",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/colors.ts",
+							"line": 10,
+							"character": 19
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"id": 222,
+							"name": "TColor"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 151,
+					"name": "elementsWhichNeedFontReset",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "The font for these elements has to be set explicitely.\nOtherwise they'll use the browser default font which is monospace."
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/reset/reset.ts",
+							"line": 5,
+							"character": 39
+						}
+					],
+					"type": {
+						"type": "literal",
+						"value": "input, pre, code, kbd, samp"
+					},
+					"defaultValue": "\"input, pre, code, kbd, samp\""
+				},
+				{
+					"id": 138,
+					"name": "fontDefaultReturnType",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/fonts.ts",
+							"line": 4,
+							"character": 34
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ObjectConstructor"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 153,
+					"name": "fontSizeDefaultReturnType",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fontSizes/fontSizes.ts",
+							"line": 4,
+							"character": 38
+						}
+					],
+					"type": {
+						"type": "reference",
+						"name": "ObjectConstructor"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 155,
+					"name": "fontSizes",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fontSizes/fontSizes.ts",
+							"line": 7,
+							"character": 22
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 154,
+						"name": "TFontSizes"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 146,
+					"name": "fonts",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/fonts.ts",
+							"line": 60,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"id": 140,
+							"name": "TFont"
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 245,
+					"name": "grid",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/grid.ts",
+							"line": 12,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 246,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"children": [
+								{
+									"id": 250,
+									"name": "as",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "StringConstructor"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 247,
+									"name": "columns",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "1"
+								},
+								{
+									"id": 248,
+									"name": "gap",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 249,
+									"name": "spacing",
+									"kind": 1024,
+									"kindString": "Property",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									},
+									"defaultValue": "..."
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"kind": 1024,
+									"children": [
+										250,
+										247,
+										248,
+										249
+									]
+								}
+							]
+						}
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 164,
+					"name": "headingSizes",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/headingSizes/headingSizes.ts",
+							"line": 12,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 160,
+						"name": "THeadingSizes"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 176,
+					"name": "linearScale",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/linearScale/linearScale.ts",
+							"line": 6,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 173,
+						"name": "TLinearScale"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 183,
+					"name": "modularScale",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/modularScale/modularScale.ts",
+							"line": 6,
+							"character": 25
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 180,
+						"name": "TModularScale"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 191,
+					"name": "scale",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/scale.ts",
+							"line": 9,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 188,
+						"name": "TScale"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 265,
+					"name": "spacing",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/spacing.ts",
+							"line": 14,
+							"character": 20
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 260,
+						"name": "TSpacing"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 216,
+					"name": "text",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/text/text.ts",
+							"line": 10,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 213,
+						"name": "TText"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 201,
+					"name": "typographicGrid",
+					"kind": 32,
+					"kindString": "Variable",
+					"flags": {
+						"isConst": true
+					},
+					"comment": {
+						"shortText": "Defines the default props for the typographic grid."
+					},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/typographicGrid/typographicGrid.ts",
+							"line": 20,
+							"character": 28
+						}
+					],
+					"type": {
+						"type": "reference",
+						"id": 197,
+						"name": "TTypographicGrid"
+					},
+					"defaultValue": "..."
+				},
+				{
+					"id": 207,
+					"name": "calculateLem",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/typographicGrid/useTypographicGrid.ts",
+							"line": 50,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 208,
+							"name": "calculateLem",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 209,
+									"name": "fontSize",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 210,
+									"name": "lineHeight",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 131,
+					"name": "getBreakpointValue",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/useBreakpoint.ts",
+							"line": 15,
+							"character": 34
+						}
+					],
+					"signatures": [
+						{
+							"id": 132,
+							"name": "getBreakpointValue",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 133,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 122,
+										"name": "TBreakpointVariants"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 134,
+					"name": "getBreakpointVariant",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/useBreakpoint.ts",
+							"line": 20,
+							"character": 36
+						}
+					],
+					"signatures": [
+						{
+							"id": 135,
+							"name": "getBreakpointVariant",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 136,
+									"name": "breakpoint",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 124,
+										"name": "TBreakpoint"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 122,
+								"name": "TBreakpointVariants"
+							}
+						}
+					]
+				},
+				{
+					"id": 170,
+					"name": "roundUpArray",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/headingSizes/useHeadingSizes.ts",
+							"line": 51,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 171,
+							"name": "roundUpArray",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Rounds up an array to 6 elements.\nThe last item fills the rest of the array when the original array size < 6 ."
+							},
+							"parameters": [
+								{
+									"id": 172,
+									"name": "values",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 282,
+					"name": "useAlignment",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/useAlignment.ts",
+							"line": 24,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 283,
+							"name": "useAlignment",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 284,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 273,
+												"name": "TAlignmentVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 273,
+													"name": "TAlignmentVariants"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 285,
+									"name": "modifier",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 274,
+										"name": "TAlignmentModifiers"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 286,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 275,
+										"name": "TAlignmentValue"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 287,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 272,
+										"name": "TAlignmentReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 272,
+								"name": "TAlignmentReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 98,
+					"name": "useArrayProps",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useArrayProps.ts",
+							"line": 1,
+							"character": 29
+						}
+					],
+					"signatures": [
+						{
+							"id": 99,
+							"name": "useArrayProps",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 100,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 101,
+									"name": "callback",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 102,
+									"name": "options",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "object"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "object"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 128,
+					"name": "useBreakpoint",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/breakpoints/useBreakpoint.ts",
+							"line": 8,
+							"character": 29
+						}
+					],
+					"signatures": [
+						{
+							"id": 129,
+							"name": "useBreakpoint",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 130,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 122,
+										"name": "TBreakpointVariants"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 123,
+								"name": "TBreakpointReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 235,
+					"name": "useColors",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/colors/useColors.ts",
+							"line": 25,
+							"character": 25
+						}
+					],
+					"signatures": [
+						{
+							"id": 236,
+							"name": "useColors",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 237,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 229,
+												"name": "TColorPairVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 229,
+													"name": "TColorPairVariants"
+												}
+											}
+										]
+									}
+								},
+								{
+									"id": 238,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 227,
+										"name": "TColorPairReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 227,
+										"name": "TColorPairReturnType"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 227,
+											"name": "TColorPairReturnType"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 111,
+					"name": "useCss",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useCss.ts",
+							"line": 16,
+							"character": 22
+						}
+					],
+					"signatures": [
+						{
+							"id": 112,
+							"name": "useCss",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Transforms CSS style functions and objects into classNames for Emotion.",
+								"text": "// NOTE:  Neither the style function nor the style object should have a return type. When type set (to object, TemplateStringsArray) no styling will be returned.\n",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\nconst styleFunction = (props: ...) => { return {...}}\nconst klass = useStyles(styleFunction, props)"
+									},
+									{
+										"tag": "example",
+										"text": "\nconst klass2 = {label: 'klass2', ...}\nconst [klass1, klass2] = useStyles([styleFunction, styleObject], props)\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 113,
+									"name": "styles",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "tuple"
+											},
+											{
+												"type": "reflection",
+												"declaration": {
+													"id": 114,
+													"name": "__type",
+													"kind": 65536,
+													"kindString": "Type literal",
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "src/tokens/helpers/useCss.ts",
+															"line": 16,
+															"character": 36
+														}
+													]
+												}
+											}
+										]
+									}
+								},
+								{
+									"id": 115,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isOptional": true
+									},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 116,
+											"name": "__type",
+											"kind": 65536,
+											"kindString": "Type literal",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "src/tokens/helpers/useCss.ts",
+													"line": 16,
+													"character": 48
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "any"
+							}
+						}
+					]
+				},
+				{
+					"id": 147,
+					"name": "useFont",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fonts/useFont.ts",
+							"line": 20,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 148,
+							"name": "useFont",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 149,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 139,
+												"name": "TFontVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 139,
+													"name": "TFontVariants"
+												}
+											}
+										]
+									}
+								},
+								{
+									"id": 150,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 137,
+										"name": "TFontReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 137,
+										"name": "TFontReturnType"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 137,
+											"name": "TFontReturnType"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 156,
+					"name": "useFontSizes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/fontSizes/useFontSizes.ts",
+							"line": 16,
+							"character": 28
+						}
+					],
+					"signatures": [
+						{
+							"id": 157,
+							"name": "useFontSizes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 158,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 152,
+										"name": "TFontSizesReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 152,
+								"name": "TFontSizesReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 251,
+					"name": "useGrid",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/useGrid.ts",
+							"line": 25,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 252,
+							"name": "useGrid",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 253,
+									"name": "columns",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "number"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 254,
+									"name": "gap",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "number"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 255,
+									"name": "spacing",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "number"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 256,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 239,
+										"name": "TGridReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 239,
+								"name": "TGridReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 165,
+					"name": "useHeadingSizes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/headingSizes/useHeadingSizes.ts",
+							"line": 19,
+							"character": 31
+						}
+					],
+					"signatures": [
+						{
+							"id": 166,
+							"name": "useHeadingSizes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 167,
+									"name": "values",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "number"
+										}
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 168,
+									"name": "scale",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 188,
+										"name": "TScale"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 169,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 159,
+										"name": "THeadingSizesReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "reference",
+										"id": 159,
+										"name": "THeadingSizesReturnType"
+									},
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"id": 159,
+											"name": "THeadingSizesReturnType"
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				{
+					"id": 177,
+					"name": "useLinearScale",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/linearScale/useLinearScale.ts",
+							"line": 3,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 178,
+							"name": "useLinearScale",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 179,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 184,
+					"name": "useModularScale",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/modularScale/useModularScale.ts",
+							"line": 4,
+							"character": 31
+						}
+					],
+					"signatures": [
+						{
+							"id": 185,
+							"name": "useModularScale",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 186,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 103,
+					"name": "useReturnTypes",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useReturnTypes.ts",
+							"line": 8,
+							"character": 30
+						}
+					],
+					"signatures": [
+						{
+							"id": 104,
+							"name": "useReturnTypes",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 105,
+									"name": "style",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 106,
+									"name": "props",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "object"
+									}
+								},
+								{
+									"id": 107,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 110,
+										"name": "TTokenReturnTypes"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 110,
+								"name": "TTokenReturnTypes"
+							}
+						}
+					]
+				},
+				{
+					"id": 192,
+					"name": "useScale",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/scale/useScale.ts",
+							"line": 5,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 193,
+							"name": "useScale",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 194,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 195,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 187,
+												"name": "TScaleVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 187,
+													"name": "TScaleVariants"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				},
+				{
+					"id": 266,
+					"name": "useSpacing",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/layout/useSpacing.ts",
+							"line": 23,
+							"character": 26
+						}
+					],
+					"signatures": [
+						{
+							"id": 267,
+							"name": "useSpacing",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 268,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 258,
+												"name": "TSpacingVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 258,
+													"name": "TSpacingVariants"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 269,
+									"name": "modifier",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 259,
+										"name": "TSpacingModifiers"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 270,
+									"name": "values",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "intrinsic",
+												"name": "number"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "intrinsic",
+													"name": "number"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 271,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 257,
+										"name": "TSpacingReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 257,
+								"name": "TSpacingReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 117,
+					"name": "useStyle",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/helpers/useStyle.ts",
+							"line": 8,
+							"character": 24
+						}
+					],
+					"signatures": [
+						{
+							"id": 118,
+							"name": "useStyle",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Transforms Emotion classNames into a final style object attachable to a component"
+							},
+							"parameters": [
+								{
+									"id": 119,
+									"name": "classNames",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 120,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "src/tokens/helpers/useStyle.ts",
+											"line": 8,
+											"character": 50
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 217,
+					"name": "useText",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/text/useText.ts",
+							"line": 38,
+							"character": 23
+						}
+					],
+					"signatures": [
+						{
+							"id": 218,
+							"name": "useText",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 219,
+									"name": "variant",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "reference",
+												"id": 212,
+												"name": "TTextVariants"
+											},
+											{
+												"type": "array",
+												"elementType": {
+													"type": "reference",
+													"id": 212,
+													"name": "TTextVariants"
+												}
+											}
+										]
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 220,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 211,
+										"name": "TTextReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 211,
+								"name": "TTextReturnType"
+							}
+						}
+					]
+				},
+				{
+					"id": 202,
+					"name": "useTypographicGrid",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "src/tokens/typography/typographicGrid/useTypographicGrid.ts",
+							"line": 31,
+							"character": 34
+						}
+					],
+					"signatures": [
+						{
+							"id": 203,
+							"name": "useTypographicGrid",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Sets up the typographic grid."
+							},
+							"parameters": [
+								{
+									"id": 204,
+									"name": "fontSizes",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 154,
+										"name": "TFontSizes"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 205,
+									"name": "lineHeight",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "..."
+								},
+								{
+									"id": 206,
+									"name": "as",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"id": 196,
+										"name": "TTypographicGridReturnType"
+									},
+									"defaultValue": "..."
+								}
+							],
+							"type": {
+								"type": "reference",
+								"id": 196,
+								"name": "TTypographicGridReturnType"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						276,
+						124,
+						222,
+						230,
+						140,
+						240,
+						160,
+						173,
+						180,
+						188,
+						260,
+						213,
+						95,
+						197
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						274,
+						272,
+						275,
+						273,
+						123,
+						122,
+						227,
+						229,
+						221,
+						137,
+						154,
+						152,
+						139,
+						239,
+						159,
+						187,
+						259,
+						257,
+						258,
+						121,
+						211,
+						212,
+						108,
+						109,
+						110,
+						196
+					]
+				},
+				{
+					"title": "Variables",
+					"kind": 32,
+					"children": [
+						281,
+						127,
+						228,
+						234,
+						226,
+						151,
+						138,
+						153,
+						155,
+						146,
+						245,
+						164,
+						176,
+						183,
+						191,
+						265,
+						216,
+						201
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						207,
+						131,
+						134,
+						170,
+						282,
+						98,
+						128,
+						235,
+						111,
+						147,
+						156,
+						251,
+						165,
+						177,
+						184,
+						103,
+						192,
+						266,
+						117,
+						217,
+						202
+					]
+				}
+			],
+			"categories": [
+				{
+					"title": "Hooks",
+					"children": [
+						111
+					]
+				},
+				{
+					"title": "Other",
+					"children": [
+						276,
+						124,
+						222,
+						230,
+						140,
+						240,
+						160,
+						173,
+						180,
+						188,
+						260,
+						213,
+						95,
+						274,
+						272,
+						275,
+						273,
+						123,
+						122,
+						227,
+						229,
+						221,
+						137,
+						154,
+						152,
+						139,
+						239,
+						159,
+						187,
+						259,
+						257,
+						258,
+						121,
+						211,
+						212,
+						108,
+						109,
+						110,
+						196,
+						281,
+						127,
+						228,
+						234,
+						226,
+						151,
+						138,
+						153,
+						155,
+						146,
+						245,
+						164,
+						176,
+						183,
+						191,
+						265,
+						216,
+						207,
+						131,
+						134,
+						170,
+						282,
+						98,
+						128,
+						235,
+						147,
+						156,
+						251,
+						165,
+						177,
+						184,
+						103,
+						192,
+						266,
+						117,
+						217
+					]
+				},
+				{
+					"title": "typography",
+					"children": [
+						197,
+						201,
+						202
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "src/tokens/index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				2
+			]
+		}
+	]
+}
