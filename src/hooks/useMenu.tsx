@@ -12,7 +12,10 @@ export function useMenu(props: TMenu = defaultMenu) {
       break;
     case "folders":
       parsed = useFolders(data);
+      break;
   }
+
+  console.log("parsed:", parsed);
 
   const simpleList = useList(parsed);
   return <ul>{simpleList}</ul>;
