@@ -3,3 +3,4 @@ export * from "./useMenu";
 export * from "./useTitle";
 export * from "./useData";
 export * from "./useList";
+export * from "./useLink";

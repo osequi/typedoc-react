@@ -1,41 +1,23 @@
-import Link from "next/link";
 import { TMenuItem } from "../components";
-import { useTitle } from ".";
+import { useTitle, useLink } from ".";
 
 export function useData(data): TMenuItem[] {
-  if (!data) return null;
   const { children } = data;
 
-  //console.log("useData children:", children);
-
   return children?.map((item) => {
-    if (!item) return null;
-    const { name, kindString } = item;
+    const { name, children } = item;
+    const title = useTitle(item);
 
-    //console.log("name:", name);
-    //console.log("kindString:", kindString);
-
-    switch (kindString) {
-      case "Module":
-        return {
+    return children
+      ? {
           variant: "section",
-          title: useTitle(name),
+          title: title,
           children: [useData(item)],
-        };
-      case "Namespace":
-      case "Function":
-      case "Variable":
-        return {
+        }
+      : {
           variant: "item",
-          title: useTitle(name),
-          children: (
-            <Link href={name} passHref>
-              <a title={name}>{name}</a>
-            </Link>
-          ),
+          title: title,
+          children: useLink(item),
         };
-      default:
-        return null;
-    }
   });
 }

@@ -1,5 +1,12 @@
 import { startCase } from "lodash";
 
-export function useTitle(title: string): string {
-  return title.includes("use") ? title : startCase(title);
+export function useTitle(item): string {
+  const { name, kindString } = item;
+
+  switch (kindString) {
+    case "Module":
+      return startCase(name);
+    default:
+      return name;
+  }
 }

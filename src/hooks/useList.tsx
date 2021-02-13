@@ -1,6 +1,5 @@
 export function useList(data) {
   return data.map((item) => {
-    if (!item) return null;
     const { variant, title, children } = item;
     switch (variant) {
       case "section":
