@@ -1,8 +1,14 @@
 import React, { ReactNode } from "react";
 import { Menu } from "../";
 
+export interface TData {
+  name: string;
+  kindString?: string;
+  children?: TData[];
+}
+
 export interface TTemplate {
-  data?: [];
+  data?: TData;
   children?: ReactNode;
 }
 

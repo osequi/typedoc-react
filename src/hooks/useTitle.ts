@@ -1,6 +1,7 @@
 import { startCase } from "lodash";
+import { TData } from "../components/Template";
 
-export function useTitle(item): string {
+export function useTitle(item: TData): string {
   const { name, kindString } = item;
 
   switch (kindString) {

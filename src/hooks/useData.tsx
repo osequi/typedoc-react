@@ -1,11 +1,11 @@
-import { TMenuItem } from "../components";
+import { TData, TMenuItem } from "../components";
 import { useTitle, useLink } from ".";
 
-export function useData(data): TMenuItem[] {
+export function useData(data: TData): TMenuItem[] {
   const { children } = data;
 
   return children?.map((item) => {
-    const { name, children } = item;
+    const { children } = item;
     const title = useTitle(item);
 
     return children

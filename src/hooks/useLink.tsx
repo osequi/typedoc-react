@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { TData } from "../components/Template";
 import { useTitle } from ".";
 
-export function useLink(item) {
+export function useLink(item: TData) {
   const { name } = item;
   const title = useTitle(item);
 

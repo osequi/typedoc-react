@@ -1,9 +1,17 @@
-import { TMenuItem } from "../components";
-import { useData, useList } from ".";
+import { TMenu, defaultMenu } from "../components";
+import { useData, useFolders, useList } from ".";
 
-export function useMenu(data) {
-  const parsed = useData(data);
-  console.log("parsed:", parsed);
+export function useMenu(props: TMenu = defaultMenu) {
+  const { data, variant } = props;
+
+  let parsed = [];
+  switch (variant) {
+    case "plain":
+      parsed = useData(data);
+    case "folders":
+      parsed = useFolders(data);
+  }
+
   const simpleList = useList(parsed);
   return <ul>{simpleList}</ul>;
 }

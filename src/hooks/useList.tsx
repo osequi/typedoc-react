@@ -1,4 +1,6 @@
-export function useList(data) {
+import { TMenuItem } from "../components/Menu";
+
+export function useList(data: TMenuItem[]) {
   return data.map((item) => {
     const { variant, title, children } = item;
     switch (variant) {
