@@ -5,6 +5,7 @@ export interface TData {
   name: string;
   kindString?: string;
   children?: TData[];
+  sources: { fileName: string }[];
 }
 
 export interface TTemplate {
