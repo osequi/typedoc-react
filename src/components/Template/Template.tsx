@@ -14,11 +14,12 @@ const defaultProps: TTemplate = {
 export function Template(props: TTemplate = defaultProps) {
   const { data, children } = props;
   console.log("data:", data);
+  const { name } = data;
 
   return (
     <div>
       <header>
-        <h1>Title</h1>
+        <h1>{name}</h1>
         <Menu data={data} />
       </header>
       {children}
