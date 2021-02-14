@@ -8,10 +8,8 @@ import { useTitle, useLink, TData } from ".";
  * @return {[type]}      [description]
  */
 export function useFolders(data: TData): TMenuItem[] {
-  console.log("data:", data);
-  const foldersList = getFoldersList(data);
-  console.log("foldersList:", foldersList);
-  return [];
+  const foldersList = flattenDeep(getFoldersList(data));
+  return parseFolders(foldersList);
 }
 
 function parseFolders(folders: string[]): TMenuItem[] {
@@ -83,5 +81,5 @@ function getFoldersList(data: TData): string[] {
           : strippedFileName;
       })
     )
-  );
+  ) as string[];
 }
