@@ -1,6 +1,6 @@
 import { uniq, compact, flattenDeep } from "lodash";
 import { TMenuItem } from "../components";
-import { useTitle, useLink, useFilename, TData } from ".";
+import { useTitle, useLink, TData } from ".";
 
 /**
  * Returns a menu following the folder structure.
@@ -8,8 +8,10 @@ import { useTitle, useLink, useFilename, TData } from ".";
  * @return {[type]}      [description]
  */
 export function useFolders(data: TData): TMenuItem[] {
-  const foldersList = uniq(compact(flattenDeep(getFolders(data, []))));
-  return parseFolders(foldersList);
+  console.log("data:", data);
+  const foldersList = getFoldersList(data);
+  console.log("foldersList:", foldersList);
+  return [];
 }
 
 function parseFolders(folders: string[]): TMenuItem[] {
@@ -66,11 +68,20 @@ function parseItem(item: string): TMenuItem {
   };
 }
 
-function getFolders(data: TData, result: string[]): string[] {
-  const { sources, children } = data;
-  const fileName = sources ? useFilename(sources[0]?.fileName) : null;
+function getFoldersList(data: TData): string[] {
+  const { children } = data;
 
-  return children?.reduce((newResult, item) => {
-    return [...result, ...newResult, fileName, getFolders(item, result)];
-  }, []);
+  return uniq(
+    compact(
+      children.map((item) => {
+        if (!item?.sources) return null;
+        const { sources } = item;
+        const { fileName } = sources[0];
+        const strippedFileName = fileName.replace("src/", "");
+        return strippedFileName.includes("index.ts")
+          ? getFoldersList(item)
+          : strippedFileName;
+      })
+    )
+  );
 }
