@@ -2,6 +2,11 @@ import { uniq, compact, flattenDeep } from "lodash";
 import { TMenuItem } from "../components";
 import { useTitle, useLink, useFilename, TData } from ".";
 
+/**
+ * Returns a menu following the folder structure.
+ * @param  {[type]} data [description]
+ * @return {[type]}      [description]
+ */
 export function useFolders(data: TData): TMenuItem[] {
   const foldersList = uniq(compact(flattenDeep(getFolders(data, []))));
   return parseFolders(foldersList);
@@ -34,7 +39,10 @@ function parseSection(
   const split = item.split("/");
   const title = split[0];
   const newItem = item.replace(`${title}/`, "");
-  const existing = result.find((item) => item?.title === title);
+
+  const newTitle = useTitle({ name: title, kindString: "Module" });
+  const existing = result.find((item) => item?.title === newTitle);
+
   if (existing) {
     existing.children = compact([
       ...existing.children,
@@ -43,7 +51,7 @@ function parseSection(
   } else
     return {
       variant: "section",
-      title: title,
+      title: newTitle,
       children: [parseEntry(newItem, [])],
     };
 }
@@ -53,8 +61,8 @@ function parseItem(item: string): TMenuItem {
   const title = split[0];
   return {
     variant: "item",
-    title: title,
-    children: "link",
+    title: useTitle({ name: title, kindString: "Module" }),
+    children: useLink({ name: title }),
   };
 }
 

@@ -15,7 +15,6 @@ const defaultProps: TTemplate = {
 export function Template(props: TTemplate = defaultProps) {
   const { data, children } = props;
   const { name } = data;
-
   return (
     <div>
       <header>

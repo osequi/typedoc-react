@@ -4,7 +4,7 @@ export interface TData {
   name: string;
   kindString?: string;
   children?: TData[];
-  sources: { fileName: string }[];
+  sources?: { fileName: string }[];
 }
 
 //// NOTE: async function doesn't accept TData as return type
