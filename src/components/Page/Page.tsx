@@ -1,5 +1,7 @@
 import React from "react";
 
 export function Page({ data }) {
-  return <>Page</>;
+  console.log("data:", data);
+  const { name } = data;
+  return <>{name}</>;
 }

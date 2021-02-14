@@ -9,12 +9,10 @@ export interface TMenuItem {
 
 export interface TMenu {
   data: TData;
-  variant?: "plain" | "folders";
 }
 
 export const defaultMenu: TMenu = {
   data: null,
-  variant: "folders",
 };
 
 export function Menu(props: TMenu) {
