@@ -3,10 +3,10 @@ import path from "path";
 import { useJson, usePage, usePaths } from "../hooks";
 import { Page, Template } from "../components";
 
-export default function SlugPage({ data, menuData }) {
+export default function SlugPage({ data, pageData }) {
   return (
-    <Template data={menuData}>
-      <Page data={data} />
+    <Template data={data}>
+      <Page data={data} pageData={pageData} />
     </Template>
   );
 }
@@ -15,7 +15,7 @@ export async function getStaticProps({ params }) {
   const data = await useJson("./", "docs.json", fs, path);
   const page = usePage(data, params);
   return {
-    props: { data: page, menuData: data },
+    props: { data: data, pageData: page },
   };
 }
 

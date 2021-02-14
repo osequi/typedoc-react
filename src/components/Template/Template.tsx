@@ -18,7 +18,7 @@ export function Template(props: TTemplate = defaultProps) {
 
   const style = {
     display: "flex",
-    "flex-wrap": "no-wrap",
+    flexWrap: "no-wrap",
   };
 
   return (
