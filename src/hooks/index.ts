@@ -5,3 +5,5 @@ export * from "./usePlain";
 export * from "./useList";
 export * from "./useLink";
 export * from "./useFolders";
+export * from "./usePage";
+export * from "./usePaths";

@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { Home, Template } from "../components";
 import { useJson } from "../hooks";
+import { Home, Template } from "../components";
 
 export default function HomePage({ data }) {
   return (
