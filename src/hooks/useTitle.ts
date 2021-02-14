@@ -1,5 +1,5 @@
 import { startCase } from "lodash";
-import { TData } from "../components/Template";
+import { TData } from ".";
 
 export function useTitle(item: TData): string {
   const { name, kindString } = item;

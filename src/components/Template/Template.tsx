@@ -1,12 +1,6 @@
 import React, { ReactNode } from "react";
 import { Menu } from "../";
-
-export interface TData {
-  name: string;
-  kindString?: string;
-  children?: TData[];
-  sources: { fileName: string }[];
-}
+import { TData } from "../../hooks";
 
 export interface TTemplate {
   data?: TData;
@@ -20,7 +14,6 @@ const defaultProps: TTemplate = {
 
 export function Template(props: TTemplate = defaultProps) {
   const { data, children } = props;
-  console.log("data:", data);
   const { name } = data;
 
   return (

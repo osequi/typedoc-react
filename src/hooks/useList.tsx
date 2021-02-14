@@ -1,7 +1,6 @@
 import { TMenuItem } from "../components/Menu";
 
 export function useList(data: TMenuItem[]) {
-  console.log("data:", data);
   if (!Array.isArray(data)) return null;
 
   return data.map((item) => {

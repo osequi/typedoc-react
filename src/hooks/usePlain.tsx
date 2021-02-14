@@ -1,10 +1,10 @@
-import { TData, TMenuItem } from "../components";
-import { useTitle, useLink } from ".";
+import { TMenuItem } from "../components";
+import { useTitle, useLink, TData } from ".";
 
-export function useData(data: TData): TMenuItem[] {
+export function usePlain(data: TData): TMenuItem[] {
   const { children } = data;
 
-  return children?.map((item) => {
+  return children?.map((item: TData) => {
     const { children } = item;
     const title = useTitle(item);
 
@@ -12,7 +12,7 @@ export function useData(data: TData): TMenuItem[] {
       ? {
           variant: "section",
           title: title,
-          children: [useData(item)],
+          children: [usePlain(item)],
         }
       : {
           variant: "item",

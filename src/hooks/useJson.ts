@@ -1,4 +1,13 @@
-//// NOTE: fs, path imported here works sometimes but they also break
+//// NOTE: fs, path imported here sometimes break
+
+export interface TData {
+  name: string;
+  kindString?: string;
+  children?: TData[];
+  sources: { fileName: string }[];
+}
+
+//// NOTE: async function doesn't accept TData as return type
 export async function useJson(folder: string, fileName: string, fs, path) {
   const dataDirectory = path.join(process.cwd(), folder);
   const filePath = path.join(dataDirectory, fileName);

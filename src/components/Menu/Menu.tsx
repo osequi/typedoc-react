@@ -1,6 +1,5 @@
 import React from "react";
-import { useMenu } from "../../hooks";
-import { TData } from "../Template";
+import { useMenu, TData } from "../../hooks";
 
 export interface TMenuItem {
   variant: "section" | "item";

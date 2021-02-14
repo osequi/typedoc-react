@@ -1,13 +1,10 @@
 import { uniq, compact, flattenDeep } from "lodash";
-import { TData, TMenuItem } from "../components";
-import { useTitle, useLink, useFilename } from ".";
+import { TMenuItem } from "../components";
+import { useTitle, useLink, useFilename, TData } from ".";
 
 export function useFolders(data: TData): TMenuItem[] {
   const foldersList = uniq(compact(flattenDeep(getFolders(data, []))));
-  //console.log("foldersList:", foldersList);
-  const parsed = parseFolders(foldersList);
-  //console.log("parsed:", parsed);
-  return parsed;
+  return parseFolders(foldersList);
 }
 
 function parseFolders(folders: string[]): TMenuItem[] {
