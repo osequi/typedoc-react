@@ -15,9 +15,15 @@ const defaultProps: TTemplate = {
 export function Template(props: TTemplate = defaultProps) {
   const { data, children } = props;
   const { name } = data;
+
+  const style = {
+    display: "flex",
+    "flex-wrap": "no-wrap",
+  };
+
   return (
-    <div>
-      <header>
+    <div style={style}>
+      <header style={{ marginRight: "1em" }}>
         <h1>{name}</h1>
         <Menu data={data} />
       </header>

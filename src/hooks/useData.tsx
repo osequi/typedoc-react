@@ -1,4 +1,4 @@
-import { uniq, compact, flattenDeep } from "lodash";
+import { compact, flattenDeep } from "lodash";
 import { TMenuItem } from "../components";
 import { useFolders, useTitle, useLink, TData } from ".";
 

@@ -1,11 +1,15 @@
 import { flattenDeep, compact } from "lodash";
 import { TData } from ".";
 
+export interface TPageParams {
+  slug: string;
+}
+
 /**
  * Returns data for a page.
  * See `getStaticProps` in `[slug].tsx`
  */
-export function usePage(data: TData[], params) {
+export function usePage(data: TData, params: TPageParams) {
   const { children } = data;
   const { slug } = params;
 
@@ -15,12 +19,12 @@ export function usePage(data: TData[], params) {
   return usePageTokens(tokens, slug) || usePageComponents(components, slug);
 }
 
-function usePageTokens(tokens, slug) {
+function usePageTokens(tokens: TData, slug: string) {
   const { children } = tokens;
   return children?.find((item) => item.name === slug);
 }
 
-function usePageComponents(components, slug) {
+function usePageComponents(components: TData, slug: string) {
   const { children, categories } = components;
 
   const rawData = categories?.map((item) => {

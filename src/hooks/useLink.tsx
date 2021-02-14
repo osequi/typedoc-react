@@ -6,7 +6,7 @@ export function useLink(item: TData) {
   const title = useTitle(item);
 
   return (
-    <Link href={name} passHref>
+    <Link href={`/${name}`} passHref>
       <a title={title}>{title}</a>
     </Link>
   );
