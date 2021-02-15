@@ -8,13 +8,9 @@ export interface TPageParams {
   slug: string;
 }
 
-export interface TType {
-  type: string;
-  name?: string;
-  elementType?: TType;
-  types?: TType[];
-}
-
+/**
+ * From the JSON
+ */
 export interface TPage {
   name: string;
   kindString: string;
@@ -26,6 +22,13 @@ export interface TPage {
   signatures?: TPage[];
   type?: TType;
   defaultValue: string;
+}
+
+export interface TType {
+  type: string;
+  name?: string;
+  elementType?: TType;
+  types?: TType[];
 }
 
 /**

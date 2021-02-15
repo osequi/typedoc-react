@@ -1,11 +1,16 @@
 import React from "react";
-import { TData, useProps } from "../../hooks";
+import { TData, TPage, TProps, useProps } from "../../hooks";
 
-export function Page(props) {
+export interface TPageProps {
+  data: TData;
+  pageData: TPage;
+}
+
+export function Page(props: TPageProps) {
   const {
     pageData: { name },
   } = props;
-  const pageProps = useProps(props);
+  const pageProps: TProps = useProps(props);
 
   return (
     <div>
