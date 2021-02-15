@@ -35,14 +35,18 @@ export interface TType {
  * Returns data for a page.
  * See `getStaticProps` in `[slug].tsx`
  */
-export function usePage(data: TData, params: TPageParams): TPage {
+export function usePage(data: TData, params: TPageParams): TPage | null {
   const { children } = data;
   const { slug } = params;
 
   const found = children?.find((item) => item.name === slug);
-  return found
-    ? found
-    : compact(
-        flattenDeep(children?.map((item) => usePage(item, params)))
-      ).pop();
+  if (found) return found;
+
+  const tryToFind = compact(
+    flattenDeep(children?.map((item) => usePage(item, params)))
+  ).pop();
+  if (tryToFind) return tryToFind;
+
+  //// NOTE: Next.js needs an explicit `null` return type vs `undefined`. `undefined` is returned when the `?:` ternary operator is used instead of `if`s.
+  return null;
 }
