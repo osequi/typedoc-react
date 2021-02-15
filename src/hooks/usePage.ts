@@ -1,5 +1,5 @@
 import { flattenDeep, compact } from "lodash";
-import { TData } from ".";
+import { TData, useFolders } from ".";
 
 /**
  * From [slug].tsx
@@ -46,6 +46,8 @@ export function usePage(data: TData, params: TPageParams): TPage | null {
     flattenDeep(children?.map((item) => usePage(item, params)))
   ).pop();
   if (tryToFind) return tryToFind;
+
+  // TODO: 'reset' returns null
 
   //// NOTE: Next.js needs an explicit `null` return type vs `undefined`. `undefined` is returned when the `?:` ternary operator is used instead of `if`s.
   return null;

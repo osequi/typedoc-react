@@ -8,3 +8,4 @@ export * from "./usePage";
 export * from "./usePaths";
 export * from "./useData";
 export * from "./useProps";
+export * from "./usePropsType";

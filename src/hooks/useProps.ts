@@ -1,5 +1,5 @@
 import { TPageProps } from "../components";
-import { TPage } from ".";
+import { TPage, usePropsType } from ".";
 
 /**
  * The props return type
@@ -15,11 +15,15 @@ export interface TProps {
 export function useProps(props: TPageProps): TProps | TProps[] | null {
   const { data, pageData } = props;
   const normalizedData = useNormalized(pageData);
-  const { name } = normalizedData;
-  const description = useDescription(normalizedData);
-  const required = useRequired(normalizedData);
-  const defaultValue = useDefaultValue(normalizedData);
-  return normalizedData;
+  console.log("normalizedData:", normalizedData);
+
+  return {
+    name: normalizedData.name,
+    description: useDescription(normalizedData),
+    required: useRequired(normalizedData),
+    defaultValue: useDefaultValue(normalizedData),
+    type: usePropsType({ data: data, pageData: normalizedData }),
+  };
 }
 
 function useDefaultValue(normalizedData: TPage): string | null {
