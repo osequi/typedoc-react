@@ -49,6 +49,8 @@ function useNormalized(pageData: TPage): TPage {
   switch (kindString) {
     case "Function":
       return pageData?.signatures?.length ? pageData.signatures[0] : null;
+    case "Interface":
+      return { ...pageData, type: { type: "Interface" } };
     default:
       return pageData;
   }

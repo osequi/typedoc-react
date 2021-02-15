@@ -1,5 +1,5 @@
 import { TPageProps } from "../components";
-import { TProps } from ".";
+import { TProps, TType, TData, useProps } from ".";
 
 export function usePropsType(props: TPageProps): TProps | string {
   const { pageData: normalizedData } = props;
@@ -9,9 +9,20 @@ export function usePropsType(props: TPageProps): TProps | string {
   switch (typeType) {
     case "reference":
       return useReference(props);
+    case "Interface":
+      return useInterface(props);
     default:
       return typeName;
   }
+}
+
+function useInterface(props: TPageProps): TProps | string {
+  const { pageData: normalizedData } = props;
+  if (!normalizedData?.children) return "No props";
+
+  return normalizedData?.children?.map((item) =>
+    useProps({ ...props, pageData: item })
+  );
 }
 
 function useReference(props: TPageProps): TProps | string {
@@ -21,13 +32,40 @@ function useReference(props: TPageProps): TProps | string {
 
   switch (typeName) {
     case "Element":
-      return useElement(props);
+      return useParameters(props);
     default:
-      return typeName;
+      return useType(props.data, type);
   }
 }
 
-function useElement(props: TPageProps): TProps | string {
+/**
+ * Returns types from `types`
+ */
+function useType(data: TData, type: TType): TProps | string {
+  if (!type?.id) return type.name;
+
+  const found = findType(data, type?.name);
+  return found ? useProps({ data: data, pageData: found }) : null;
+}
+
+function findType(data: TData, name) {
+  const { children } = data;
+  const found = children?.find((item) => item.name === name);
+  return found
+    ? found
+    : children?.reduce((result, item) => {
+        return result ? result : findType(item, name);
+      }, null);
+}
+
+/**
+ * Returns types from `parameters`
+ */
+function useParameters(props: TPageProps): TProps | string {
   const { pageData: normalizedData } = props;
   if (!normalizedData.parameters) return "No props";
+
+  return normalizedData?.parameters?.map((item) =>
+    useProps({ ...props, pageData: item })
+  );
 }

@@ -20,12 +20,14 @@ export interface TPage {
   };
   parameters?: TPage[];
   signatures?: TPage[];
+  children?: TPage[];
   type?: TType;
   defaultValue: string;
 }
 
 export interface TType {
   type: string;
+  id?: number;
   name?: string;
   elementType?: TType;
   types?: TType[];

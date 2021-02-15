@@ -1,6 +1,9 @@
 import { uniq, compact } from "lodash";
 import { TData } from ".";
 
+/**
+ * Returns a list of file and folder names.
+ */
 export function useFolders(data: TData): string[] {
   const { children } = data;
 
