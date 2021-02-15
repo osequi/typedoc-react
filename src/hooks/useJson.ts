@@ -3,7 +3,7 @@
 export interface TData {
   name: string;
   kindString?: string;
-  children?: TData[];
+  children?: any;
   sources?: { fileName: string }[];
 }
 

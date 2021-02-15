@@ -2,9 +2,9 @@ import React from "react";
 import { TData, useProps } from "../../hooks";
 
 export function Page(props) {
-  const { data, pageData } = props;
-  console.log("data:", data);
-  const { name } = pageData;
+  const {
+    pageData: { name },
+  } = props;
   const pageProps = useProps(props);
 
   return (
