@@ -59,9 +59,7 @@ function useSubType(data, name) {
     ? found
     : children?.reduce((result, item) => {
         return result
-          ? result.children
-            ? useParams(result.children, data)
-            : useParam(result, data)
+          ? useParams(result.children, data)
           : useSubType(item, name);
       }, null);
 }
