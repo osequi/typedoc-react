@@ -1,33 +1,44 @@
-export function useProps(props) {
+export interface TProps {
+  name: string;
+  type: string | TProps;
+  defaultValue: string;
+  description: string;
+  required: boolean;
+}
+
+export function useProps(props): TProps | TProps[] | null {
   if (!props?.pageData?.signatures[0]?.parameters) return null;
 
-  const { pageData, data } = props;
+  const { data, pageData } = props;
   const params = pageData.signatures[0].parameters;
   return useParams(params, data);
 }
 
-//// NOTE: this has to be made recursive
 function useParams(params, data) {
-  console.log("params:", params);
+  //console.log("params:", params);
   return params?.map((item) => {
-    let { type } = item;
-    let { type: type2, name } = type;
+    const { type, name, defaultValue, comment } = item;
+    const { type: typeType, name: typeName } = type;
+    const newType =
+      typeType === "reference" ? useType(data, typeName) : typeName;
+    const description = comment ? comment : "";
 
-    if (type2 === "reference") {
-      type.value = useQuery(data, name);
-    }
-
-    return { ...item, type: type };
+    return {
+      name: name,
+      type: newType,
+      defaultValue: defaultValue,
+      description: description,
+      required: true,
+    };
   });
 }
 
-//// NOTE: this works fine
-function useQuery(data, name) {
+function useType(data, name) {
   const { children } = data;
   const found = children?.find((item) => item.name === name);
   return found
     ? found
     : children?.reduce((result, item) => {
-        return result ? result : useQuery(item, name);
+        return result ? result : useType(item, name);
       }, null);
 }

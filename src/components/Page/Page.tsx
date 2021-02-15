@@ -10,7 +10,9 @@ export function Page(props) {
   return (
     <div>
       <h1>{name}</h1>
-      <p>{JSON.stringify(pageProps)}</p>
+      <p>
+        <pre>{JSON.stringify(pageProps, null, 2)}</pre>
+      </p>
     </div>
   );
 }
