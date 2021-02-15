@@ -15,20 +15,21 @@ export function useProps(props): TProps | TProps[] | null {
 }
 
 function useParams(params, data) {
-  //console.log("params:", params);
+  console.log("params:", params);
   return params?.map((item) => {
-    const { type, name, defaultValue, comment } = item;
+    const { type, name, defaultValue, comment, flags } = item;
     const { type: typeType, name: typeName } = type;
     const newType =
       typeType === "reference" ? useType(data, typeName) : typeName;
     const description = comment ? comment : "";
+    const required = flags?.isOptional ? false : true;
 
     return {
       name: name,
       type: newType,
       defaultValue: defaultValue,
       description: description,
-      required: true,
+      required: required,
     };
   });
 }
@@ -39,6 +40,6 @@ function useType(data, name) {
   return found
     ? found
     : children?.reduce((result, item) => {
-        return result ? result : useType(item, name);
+        return result ? useParams(result.children, data) : useType(item, name);
       }, null);
 }
