@@ -75,6 +75,23 @@ export interface TCallSignature extends TBaseEntry {
   type: {};
 }
 
+export interface TParameter extends TBaseEntry {
+  kindString: "Parameter";
+  type: {};
+  defaultValue?: string;
+}
+
+export interface TConstructor extends TBaseEntry {
+  kindString: "Constructor";
+  signatures: [];
+}
+
+export interface TConstructorSignature extends TBaseEntry {
+  kindString: "Constructor signature";
+  parameters: [];
+  type: {};
+}
+
 /**
  * From the JSON
  */
