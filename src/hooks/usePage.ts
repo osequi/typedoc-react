@@ -1,11 +1,78 @@
 import { flattenDeep, compact } from "lodash";
-import { TData, useFolders } from ".";
+import { TData } from ".";
+import { TStaticPropsParams } from "../pages";
 
-/**
- * From [slug].tsx
- */
-export interface TPageParams {
-  slug: string;
+export interface TBaseEntry {
+  id: number;
+  name: string;
+  flags: object;
+  comment?: {
+    shortText?: string;
+  };
+}
+
+export interface TModule extends TBaseEntry {
+  kindString: "Module";
+  children: [];
+}
+
+export interface TNamespace extends TBaseEntry {
+  kindString: "Namespace";
+  children: [];
+  groups: [];
+}
+
+export interface TVariable extends TBaseEntry {
+  kindString: "Variable";
+  type: {};
+  sources: [];
+  defaultValue: string;
+}
+
+export interface TInterface extends TBaseEntry {
+  kindString: "Interface";
+  children?: [];
+  sources?: [];
+  extendedBy?: [];
+  groups?: [];
+  extendedTypes?: [];
+  typeParameter?: [];
+}
+
+export interface TProperty extends TBaseEntry {
+  kindString: "Property";
+  sources: [];
+  type: {};
+  inheritedFrom?: {};
+}
+
+export interface TTypeLiteral extends TBaseEntry {
+  kindString: "Type literal";
+  children?: [];
+  groups?: [];
+  signatures?: [];
+}
+
+export interface TTypeAlias extends TBaseEntry {
+  kindString: "Type alias";
+  sources: [];
+  type: [];
+}
+
+export interface TTypeParameter extends TBaseEntry {
+  kindString: "Type parameter";
+}
+
+export interface TFunction extends TBaseEntry {
+  kindString: "Function";
+  sources: [];
+  signatures: [];
+}
+
+export interface TCallSignature extends TBaseEntry {
+  kindString: "Call signature";
+  parameters?: [];
+  type: {};
 }
 
 /**
@@ -37,7 +104,7 @@ export interface TType {
  * Returns data for a page.
  * See `getStaticProps` in `[slug].tsx`
  */
-export function usePage(data: TData, params: TPageParams): TPage | null {
+export function usePage(data: TData, params: TStaticPropsParams): TPage | null {
   const { children } = data;
   const { slug } = params;
 

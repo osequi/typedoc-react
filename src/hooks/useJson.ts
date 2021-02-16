@@ -1,5 +1,6 @@
-//// NOTE: fs, path imported here sometimes break
+//// NOTE: fs, path when imported here sometimes breaks
 
+//// NOTE: This is a partial mapping of the data, good enough to create a menu structure. For a more thorough mapping see `usePage`
 export interface TData {
   name: string;
   kindString?: string;

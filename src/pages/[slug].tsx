@@ -3,6 +3,10 @@ import path from "path";
 import { useJson, usePage, usePaths, TPage } from "../hooks";
 import { Page, Template } from "../components";
 
+export interface TStaticPropsParams {
+  slug: string;
+}
+
 export default function SlugPage({ data, pageData }) {
   return (
     <Template data={data}>
