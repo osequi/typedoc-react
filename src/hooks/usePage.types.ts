@@ -18,6 +18,7 @@ export interface TPageData {
     | "Constructor signature";
   comment?: {
     shortText?: string;
+    text?: string;
   };
   defaultValue?: string;
   children?: TNamespace[] | TInterface[] | TVariable[] | TProperty[];
