@@ -13,12 +13,12 @@ export interface TBaseEntry {
 
 export interface TModule extends TBaseEntry {
   kindString: "Module";
-  children: [];
+  children: TNamespace[] | TInterface[];
 }
 
 export interface TNamespace extends TBaseEntry {
   kindString: "Namespace";
-  children: [];
+  children: TVariable[];
   groups: [];
 }
 
@@ -26,12 +26,12 @@ export interface TVariable extends TBaseEntry {
   kindString: "Variable";
   type: {};
   sources: [];
-  defaultValue: string;
+  defaultValue?: string;
 }
 
 export interface TInterface extends TBaseEntry {
   kindString: "Interface";
-  children?: [];
+  children?: TProperty[];
   sources?: [];
   extendedBy?: [];
   groups?: [];
@@ -48,7 +48,7 @@ export interface TProperty extends TBaseEntry {
 
 export interface TTypeLiteral extends TBaseEntry {
   kindString: "Type literal";
-  children?: [];
+  children?: TProperty[];
   groups?: [];
   signatures?: [];
 }
@@ -66,12 +66,12 @@ export interface TTypeParameter extends TBaseEntry {
 export interface TFunction extends TBaseEntry {
   kindString: "Function";
   sources: [];
-  signatures: [];
+  signatures: TCallSignature[];
 }
 
 export interface TCallSignature extends TBaseEntry {
   kindString: "Call signature";
-  parameters?: [];
+  parameters?: TParameter[];
   type: {};
 }
 
@@ -83,13 +83,54 @@ export interface TParameter extends TBaseEntry {
 
 export interface TConstructor extends TBaseEntry {
   kindString: "Constructor";
-  signatures: [];
+  signatures: TConstructorSignature[];
 }
 
 export interface TConstructorSignature extends TBaseEntry {
   kindString: "Constructor signature";
-  parameters: [];
+  parameters: TParameter[];
   type: {};
+}
+
+export interface TBaseType {
+  type: string;
+}
+
+export interface TTypeReference extends TBaseType {
+  name: string;
+  id?: number;
+  typeArguments?: [];
+}
+
+export interface TTypeIntrinsic extends TBaseType {
+  name: string;
+}
+
+export interface TTypeArray extends TBaseType {
+  elementType: TTypeIntrinsic | TTypeReference;
+}
+
+export interface TTypeReflection extends TBaseType {
+  declaration: TTypeLiteral2;
+}
+
+export interface TTypeUnion extends TBaseType {
+  types: (
+    | TTypeReference
+    | TTypeIntrinsic
+    | TTypeArray
+    | TTypeReflection
+    | TTypeLiteral2
+    | TTypeUnknown
+  )[];
+}
+
+export interface TTypeLiteral2 extends TBaseType {
+  value: string;
+}
+
+export interface TTypeUnknown extends TBaseType {
+  name: string;
 }
 
 /**
