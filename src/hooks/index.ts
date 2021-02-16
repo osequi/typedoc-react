@@ -10,3 +10,4 @@ export * from "./useData";
 export * from "./useSlug";
 export * from "./usePage.types";
 export * from "./useDescription";
+export * from "./useProps";
