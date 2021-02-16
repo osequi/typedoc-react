@@ -24,7 +24,7 @@ export interface TNamespace extends TBaseEntry {
 
 export interface TVariable extends TBaseEntry {
   kindString: "Variable";
-  type: {};
+  type: TTypeAny;
   sources: [];
   defaultValue?: string;
 }
@@ -42,7 +42,7 @@ export interface TInterface extends TBaseEntry {
 export interface TProperty extends TBaseEntry {
   kindString: "Property";
   sources: [];
-  type: {};
+  type: TTypeAny;
   inheritedFrom?: {};
 }
 
@@ -50,13 +50,13 @@ export interface TTypeLiteral extends TBaseEntry {
   kindString: "Type literal";
   children?: TProperty[];
   groups?: [];
-  signatures?: [];
+  signatures?: (TCallSignature | TConstructorSignature)[];
 }
 
 export interface TTypeAlias extends TBaseEntry {
   kindString: "Type alias";
   sources: [];
-  type: [];
+  type: TTypeAny;
 }
 
 export interface TTypeParameter extends TBaseEntry {
@@ -72,12 +72,12 @@ export interface TFunction extends TBaseEntry {
 export interface TCallSignature extends TBaseEntry {
   kindString: "Call signature";
   parameters?: TParameter[];
-  type: {};
+  type: TTypeAny;
 }
 
 export interface TParameter extends TBaseEntry {
   kindString: "Parameter";
-  type: {};
+  type: TTypeAny;
   defaultValue?: string;
 }
 
@@ -89,7 +89,7 @@ export interface TConstructor extends TBaseEntry {
 export interface TConstructorSignature extends TBaseEntry {
   kindString: "Constructor signature";
   parameters: TParameter[];
-  type: {};
+  type: TTypeAny;
 }
 
 export interface TBaseType {
@@ -99,7 +99,7 @@ export interface TBaseType {
 export interface TTypeReference extends TBaseType {
   name: string;
   id?: number;
-  typeArguments?: [];
+  typeArguments?: TTypeAny[];
 }
 
 export interface TTypeIntrinsic extends TBaseType {
@@ -132,6 +132,15 @@ export interface TTypeLiteral2 extends TBaseType {
 export interface TTypeUnknown extends TBaseType {
   name: string;
 }
+
+export type TTypeAny =
+  | TTypeReference
+  | TTypeIntrinsic
+  | TTypeArray
+  | TTypeReflection
+  | TTypeLiteral2
+  | TTypeUnknown
+  | TTypeUnion;
 
 /**
  * From the JSON
