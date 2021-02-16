@@ -1,6 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { useJson, usePage, usePaths, TPage } from "../hooks";
+import { useJson, useSlug, usePaths, TPageData } from "../hooks";
 import { Page, Template } from "../components";
 
 export interface TStaticPropsParams {
@@ -17,7 +17,7 @@ export default function SlugPage({ data, pageData }) {
 
 export async function getStaticProps({ params }) {
   const data = await useJson("./", "docs.json", fs, path);
-  const page: TPage = usePage(data, params);
+  const page: TPageData = useSlug(data, params);
   return {
     props: { data: data, pageData: page },
   };

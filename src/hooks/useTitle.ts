@@ -11,6 +11,7 @@ export function useTitle(item: TData): string {
 
   switch (kindString) {
     case "Module":
+    case "Variable":
       return startCase(name);
     default:
       return name;

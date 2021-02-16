@@ -7,3 +7,6 @@ export * from "./useFolders";
 export * from "./usePage";
 export * from "./usePaths";
 export * from "./useData";
+export * from "./useSlug";
+export * from "./usePage.types";
+export * from "./useDescription";
