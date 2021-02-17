@@ -6,6 +6,7 @@ export interface TPage {
   description: string;
   type: string;
   props: TProps | TProps[];
+  raw: any;
 }
 
 export function usePage(props: TPageProps): TPage {
@@ -17,6 +18,7 @@ export function usePage(props: TPageProps): TPage {
     description: useDescription(pageData),
     type: usePageType(pageData),
     props: useProps({ ...props, pageData: normalizedPageData }),
+    raw: normalizedPageData,
   };
 
   return result;

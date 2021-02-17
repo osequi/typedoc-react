@@ -12,25 +12,25 @@ export interface TProps {
   description: string;
   required: boolean;
   defaultValue: string;
-  type: string | TProps;
+  type: any;
 }
 
 export function useProps(props: TPageProps): TProps | TProps[] {
   const { pageData } = props;
   const normalizedPageData = usePropsKindString(pageData);
 
-  const result = {
-    name: normalizedPageData.name,
-    description: useDescription(normalizedPageData),
-    required: useRequired(normalizedPageData),
-    defaultValue: useDefaultValue(normalizedPageData),
-    type: useType({ ...props, pageData: normalizedPageData }),
-  };
-
-  return normalizedPageData;
+  return normalizedPageData.map((item) => {
+    return {
+      name: item.name,
+      description: useDescription(item),
+      required: useRequired(item),
+      defaultValue: useDefaultValue(item),
+      type: useType({ ...props, pageData: item }),
+    };
+  });
 }
 
-function usePropsKindString(pageData: TPageData): TPageData {
+function usePropsKindString(pageData: TPageData): TPageData[] {
   const { kindString } = pageData;
 
   switch (kindString) {
