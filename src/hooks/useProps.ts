@@ -5,6 +5,7 @@ import {
   TNamespace,
   TVariable,
   TTypeReflection,
+  TInterface,
   useDescription,
   useType,
   useDefaultValue,
@@ -47,6 +48,9 @@ function usePropsKindString(pageData: TPageData): TPageData[] {
     case "Namespace":
       const { children } = pageData as TNamespace;
       return children;
+    case "Interface":
+      const { children: children2 } = pageData as TInterface;
+      return children2;
     case "Variable":
       const { type } = pageData as TVariable;
       const { type: typeType } = type;

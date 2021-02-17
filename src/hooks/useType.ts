@@ -4,7 +4,6 @@ import {
   TTypeAny,
   TTypeReference,
   TTypeIntrinsic,
-  TTypeReflection,
   TTypeUnion,
   TTypeArray,
 } from ".";
@@ -16,10 +15,10 @@ export interface TType {
 export function useType(props: TPageProps): TType {
   const { pageData, data } = props;
   const { type } = pageData;
-  return useReference(type);
+  return useReference(type, data);
 }
 
-function useReference(type: TTypeAny): TType {
+function useReference(type: TTypeAny, data: TData): TType {
   if (!type) return null;
   const { type: typeType } = type;
 
@@ -31,16 +30,19 @@ function useReference(type: TTypeAny): TType {
       const { name: name2 } = type as TTypeIntrinsic;
       return { name: name2 };
     case "reflection":
-      const { declaration } = type as TTypeReflection;
       return { name: "Type literal must be handled in useProps" };
     case "union":
       const { types } = type as TTypeUnion;
-      return { name: types.map((item) => useReference(item).name).join("|") };
+      return {
+        name: types.map((item) => useReference(item, data).name).join("|"),
+      };
     case "array":
       const { elementType } = type as TTypeArray;
       return {
         //// NOTE: `map` should be used, otherwise we enter an infinite loop
-        name: `${[elementType].map((item) => useReference(item).name).pop()}[]`,
+        name: `${[elementType]
+          .map((item) => useReference(item, data).name)
+          .pop()}[]`,
       };
     default:
       return { name: "default" };
