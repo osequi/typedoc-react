@@ -133,7 +133,7 @@ export interface TTypeArray extends TBaseType {
 }
 
 export interface TTypeReflection extends TBaseType {
-  declaration: TTypeLiteral2;
+  declaration: TTypeLiteral;
 }
 
 export interface TTypeUnion extends TBaseType {
@@ -142,13 +142,9 @@ export interface TTypeUnion extends TBaseType {
     | TTypeIntrinsic
     | TTypeArray
     | TTypeReflection
-    | TTypeLiteral2
+    | TTypeLiteral
     | TTypeUnknown
   )[];
-}
-
-export interface TTypeLiteral2 extends TBaseType {
-  value: string;
 }
 
 export interface TTypeUnknown extends TBaseType {
@@ -160,6 +156,6 @@ export type TTypeAny =
   | TTypeIntrinsic
   | TTypeArray
   | TTypeReflection
-  | TTypeLiteral2
+  | TTypeLiteral
   | TTypeUnknown
   | TTypeUnion;

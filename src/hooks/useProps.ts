@@ -1,6 +1,10 @@
 import { TPageProps } from "../components";
 import {
   TPageData,
+  TCallSignature,
+  TNamespace,
+  TVariable,
+  TTypeReflection,
   useDescription,
   useType,
   useDefaultValue,
@@ -19,6 +23,9 @@ export function useProps(props: TPageProps): TProps | TProps[] {
   const { pageData } = props;
   const normalizedPageData = usePropsKindString(pageData);
 
+  // no props
+  if (!normalizedPageData) return null;
+
   return normalizedPageData.map((item) => {
     return {
       name: item.name,
@@ -35,8 +42,24 @@ function usePropsKindString(pageData: TPageData): TPageData[] {
 
   switch (kindString) {
     case "Call signature":
-      return pageData.parameters;
+      const { parameters } = pageData as TCallSignature;
+      return parameters;
+    case "Namespace":
+      const { children } = pageData as TNamespace;
+      return children;
+    case "Variable":
+      const { type } = pageData as TVariable;
+      const { type: typeType } = type;
+
+      if (typeType === "reflection") {
+        const { declaration } = type as TTypeReflection;
+        const { children } = declaration;
+        return children;
+      } else {
+        return [pageData];
+      }
+
     default:
-      return pageData;
+      return null;
   }
 }
