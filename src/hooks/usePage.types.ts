@@ -136,13 +136,17 @@ export interface TTypeReflection extends TBaseType {
   declaration: TTypeLiteral;
 }
 
+export interface TTypeLiteral2 extends TBaseType {
+  value: string;
+}
+
 export interface TTypeUnion extends TBaseType {
   types: (
     | TTypeReference
     | TTypeIntrinsic
     | TTypeArray
     | TTypeReflection
-    | TTypeLiteral
+    | TTypeLiteral2
     | TTypeUnknown
   )[];
 }

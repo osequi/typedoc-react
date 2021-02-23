@@ -7,10 +7,13 @@ import {
   TTypeReflection,
   TInterface,
   TType,
+  TTypeAlias,
+  TProperty,
   useDescription,
   useType,
   useDefaultValue,
   useRequired,
+  useTypeReflection,
 } from ".";
 
 export interface TProps {
@@ -60,17 +63,13 @@ function usePropsKindString(pageData: TPageData): TPageData[] {
       const { children: children2 } = pageData as TInterface;
       return children2;
     case "Variable":
-      const { type } = pageData as TVariable;
-      const { type: typeType } = type;
-
-      if (typeType === "reflection") {
-        const { declaration } = type as TTypeReflection;
-        const { children } = declaration;
-        return children;
-      } else {
-        return [pageData];
-      }
-
+      const { type: typeVariable } = pageData as TVariable;
+      const { type: typeTypeVariable } = typeVariable;
+      return typeTypeVariable === "reflection"
+        ? useTypeReflection(typeVariable as TTypeReflection)
+        : [pageData];
+    case "Type alias":
+      return [pageData];
     default:
       return null;
   }

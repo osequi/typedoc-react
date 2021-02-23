@@ -63,6 +63,7 @@ function usePageType(pageData: TPageData): string {
 
   switch (kindString) {
     case "Variable":
+    case "Type alias":
       return "Token";
     default:
       return name.includes("use") ? "Token" : "Component";
