@@ -24,6 +24,10 @@ export function Page(props: TPageProps) {
       <p>
         <pre>{JSON.stringify(props.pageData, null, 2)}</pre>
       </p>
+      <hr />
+      <p>
+        <pre>{JSON.stringify(props.data, null, 2)}</pre>
+      </p>
     </div>
   );
 }

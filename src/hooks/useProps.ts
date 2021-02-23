@@ -22,12 +22,16 @@ export interface TProps {
 
 export function useProps(props: TPageProps): TProps | TProps[] {
   const { pageData } = props;
+  console.log({ pageData });
   const normalizedPageData = usePropsKindString(pageData);
+  console.log({ normalizedPageData });
 
   // no props
   if (!normalizedPageData) return null;
 
-  return normalizedPageData.map((item) => {
+  const normalizedPageDataSorted = sortProps(normalizedPageData);
+
+  return normalizedPageDataSorted.map((item) => {
     return {
       name: item.name,
       description: useDescription(item),
@@ -36,6 +40,13 @@ export function useProps(props: TPageProps): TProps | TProps[] {
       type: useType({ ...props, pageData: item }),
     };
   });
+}
+
+function sortProps(pageData: TPageData[]): TPageData[] {
+  // see https://www.cloudhadoop.com/typescript-sort-object-array/
+  return pageData.sort(
+    (a: TPageData, b: TPageData) => 0 - (a.id > b.id ? -1 : 1)
+  );
 }
 
 function usePropsKindString(pageData: TPageData): TPageData[] {

@@ -31,6 +31,8 @@ export function usePage(props: TPageProps): TPage {
   };
 }
 
+// in case of components when they have a single prop it is immediately destuctured
+// ie: Image(props: TImage) => the TImage props will be shown
 function usePageData(
   type: string,
   data: TData,
@@ -42,11 +44,13 @@ function usePageData(
   const props =
     kindString === "Call signature"
       ? normalizedPageData.parameters
-      : kindString === "Namespace"
+      : // A special case for Semantic Elements
+      kindString === "Namespace"
       ? normalizedPageData.children
       : null;
   if (!props || props.length > 1) return normalizedPageData;
 
+  // otherwise it should be a reference
   const { type: propType } = props[0];
   const { name } = propType as TTypeReference;
   const reference = findType(name, data);
