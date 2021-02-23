@@ -33,22 +33,32 @@ function useReference(type: TTypeAny, data: TData): TType {
     case "reference":
       const { name: name1, id: id1 } = type as TTypeReference;
       const reference = useTypeFind(id1, data);
-      return {
-        name: name1,
-        variant: "reference",
-        reference: usePage({ data: data, pageData: reference }),
-      };
+      return reference
+        ? {
+            name: name1,
+            variant: "reference",
+            reference: usePage({ data: data, pageData: reference }),
+          }
+        : {
+            name: name1,
+            variant: "value",
+          };
+
     case "intrinsic":
       const { name: name2 } = type as TTypeIntrinsic;
       return { name: name2, variant: "value" };
     case "reflection":
-      console.log({ type });
       const { declaration } = type as TTypeReflection;
-      return {
-        name: declaration.name,
-        variant: "reference",
-        reference: usePage({ data: data, pageData: declaration }),
-      };
+      return declaration
+        ? {
+            name: declaration.name,
+            variant: "reference",
+            reference: usePage({ data: data, pageData: declaration }),
+          }
+        : {
+            name: declaration.name,
+            variant: "value",
+          };
     case "literal":
       const { value } = type as TTypeLiteral2;
       return { name: value, variant: "value" };
@@ -60,12 +70,13 @@ function useReference(type: TTypeAny, data: TData): TType {
       };
     case "array":
       const { elementType } = type as TTypeArray;
+      //// NOTE: `map` should be used, otherwise we enter an infinite loop
+      const element = [elementType]
+        .map((item) => useReference(item, data))
+        .pop();
       return {
-        //// NOTE: `map` should be used, otherwise we enter an infinite loop
-        name: `${[elementType]
-          .map((item) => useReference(item, data).name)
-          .pop()}[]`,
-        variant: "array",
+        ...element,
+        name: `${element.name}[]`,
       };
     default:
       return { name: "default", variant: "value" };
