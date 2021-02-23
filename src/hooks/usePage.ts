@@ -53,8 +53,8 @@ function usePageData(
 
   // otherwise it should be a reference
   const { type: propType } = props[0];
-  const { name } = propType as TTypeReference;
-  const reference = useTypeFind(name, data);
+  const { name, id } = propType as TTypeReference;
+  const reference = useTypeFind(id, data);
   return reference ? reference : normalizedPageData;
 }
 
@@ -64,6 +64,7 @@ function usePageType(pageData: TPageData): string {
   switch (kindString) {
     case "Variable":
     case "Type alias":
+    case "Type literal":
       return "Token";
     default:
       return name.includes("use") ? "Token" : "Component";

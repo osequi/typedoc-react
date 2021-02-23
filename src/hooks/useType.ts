@@ -8,6 +8,7 @@ import {
   TTypeUnion,
   TTypeArray,
   TTypeLiteral2,
+  TTypeReflection,
   useTypeFind,
   usePage,
 } from ".";
@@ -30,8 +31,8 @@ function useReference(type: TTypeAny, data: TData): TType {
 
   switch (typeType) {
     case "reference":
-      const { name: name1 } = type as TTypeReference;
-      const reference = useTypeFind(name1, data);
+      const { name: name1, id: id1 } = type as TTypeReference;
+      const reference = useTypeFind(id1, data);
       return {
         name: name1,
         variant: "reference",
@@ -41,9 +42,12 @@ function useReference(type: TTypeAny, data: TData): TType {
       const { name: name2 } = type as TTypeIntrinsic;
       return { name: name2, variant: "value" };
     case "reflection":
+      console.log({ type });
+      const { declaration } = type as TTypeReflection;
       return {
-        name: "Type literal must be handled in useProps",
-        variant: "value",
+        name: declaration.ame,
+        variant: "reference",
+        reference: usePage({ data: data, pageData: declaration }),
       };
     case "literal":
       const { value } = type as TTypeLiteral2;
