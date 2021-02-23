@@ -14,3 +14,4 @@ export * from "./useProps";
 export * from "./useDefaultValue";
 export * from "./useRequired";
 export * from "./useType";
+export * from "./useTypeFind";

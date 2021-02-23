@@ -6,6 +6,7 @@ import {
   TVariable,
   TTypeReflection,
   TInterface,
+  TType,
   useDescription,
   useType,
   useDefaultValue,
@@ -17,16 +18,12 @@ export interface TProps {
   description: string;
   required: boolean;
   defaultValue: string;
-  type: any;
+  type: TType;
 }
 
 export function useProps(props: TPageProps): TProps | TProps[] {
   const { pageData } = props;
-  console.log({ pageData });
   const normalizedPageData = usePropsKindString(pageData);
-  console.log({ normalizedPageData });
-
-  // no props
   if (!normalizedPageData) return null;
 
   const normalizedPageDataSorted = sortProps(normalizedPageData);

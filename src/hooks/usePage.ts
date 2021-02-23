@@ -4,6 +4,7 @@ import {
   useDescription,
   useTitle,
   useProps,
+  useTypeFind,
   TProps,
   TData,
   TTypeReference,
@@ -53,18 +54,8 @@ function usePageData(
   // otherwise it should be a reference
   const { type: propType } = props[0];
   const { name } = propType as TTypeReference;
-  const reference = findType(name, data);
+  const reference = useTypeFind(name, data);
   return reference ? reference : normalizedPageData;
-}
-
-function findType(name: string, data: TData): TPageData {
-  const { children } = data;
-  const found = children?.find((item) => item.name === name);
-  return found
-    ? found
-    : children?.reduce((result, item) => {
-        return result ? result : findType(name, item);
-      }, null);
 }
 
 function usePageType(pageData: TPageData): string {
