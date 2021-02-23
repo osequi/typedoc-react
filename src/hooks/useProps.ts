@@ -9,6 +9,7 @@ import {
   TType,
   TTypeAlias,
   TProperty,
+  TTypeLiteral,
   useDescription,
   useType,
   useDefaultValue,
@@ -70,6 +71,9 @@ function usePropsKindString(pageData: TPageData): TPageData[] {
         : [pageData];
     case "Type alias":
       return [pageData];
+    case "Type literal":
+      const { children: children3 } = pageData as TTypeLiteral;
+      return children3;
     default:
       return null;
   }

@@ -42,13 +42,18 @@ function usePageData(
   if (type !== "Component") return normalizedPageData;
 
   const { kindString } = normalizedPageData;
-  const props =
-    kindString === "Call signature"
-      ? normalizedPageData.parameters
-      : // A special case for Semantic Elements
-      kindString === "Namespace"
-      ? normalizedPageData.children
-      : null;
+  let props = null;
+  switch (kindString) {
+    case "Call signature":
+      props = normalizedPageData.parameters;
+      break;
+    case "Namespace":
+      props = normalizedPageData.children;
+      break;
+    default:
+      break;
+  }
+
   if (!props || props.length > 1) return normalizedPageData;
 
   // otherwise it should be a reference
@@ -64,8 +69,9 @@ function usePageType(pageData: TPageData): string {
   switch (kindString) {
     case "Variable":
     case "Type alias":
-    case "Type literal":
       return "Token";
+    case "Type literal":
+      return "Component";
     default:
       return name.includes("use") ? "Token" : "Component";
   }

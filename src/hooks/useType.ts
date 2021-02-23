@@ -45,7 +45,7 @@ function useReference(type: TTypeAny, data: TData): TType {
       console.log({ type });
       const { declaration } = type as TTypeReflection;
       return {
-        name: declaration.ame,
+        name: declaration.name,
         variant: "reference",
         reference: usePage({ data: data, pageData: declaration }),
       };
