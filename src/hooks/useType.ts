@@ -12,6 +12,7 @@ import {
   useTypeFind,
   usePage,
 } from ".";
+import { uniqBy } from "lodash";
 
 export interface TType {
   name: string;
@@ -64,10 +65,21 @@ function useReference(type: TTypeAny, data: TData): TType {
       return { name: value, variant: "value" };
     case "union":
       const { types } = type as TTypeUnion;
-      return {
-        name: types.map((item) => useReference(item, data).name).join("|"),
-        variant: "value",
-      };
+      const result = types.map((item) => useReference(item, data));
+      const names = result.map((item) => item.name).join("|");
+      const references = result.map((item) => item.reference);
+      const referencesUnique = uniqBy(references, "name");
+      return referencesUnique
+        ? {
+            name: names,
+            variant: "reference",
+            reference: referencesUnique[0],
+          }
+        : {
+            name: names,
+            variant: "value",
+          };
+
     case "array":
       const { elementType } = type as TTypeArray;
       //// NOTE: `map` should be used, otherwise we enter an infinite loop
