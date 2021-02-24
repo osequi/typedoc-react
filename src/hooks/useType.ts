@@ -17,7 +17,7 @@ import { uniqBy } from "lodash";
 export interface TType {
   name: string;
   variant: "value" | "reference" | "array";
-  reference?: TPageData;
+  references?: TPageData[];
 }
 
 export function useType(props: TPageProps): TType {
@@ -38,7 +38,7 @@ function useReference(type: TTypeAny, data: TData): TType {
         ? {
             name: name1,
             variant: "reference",
-            reference: usePage({ data: data, pageData: reference }),
+            references: [usePage({ data: data, pageData: reference })],
           }
         : {
             name: name1,
@@ -54,7 +54,7 @@ function useReference(type: TTypeAny, data: TData): TType {
         ? {
             name: declaration.name,
             variant: "reference",
-            reference: usePage({ data: data, pageData: declaration }),
+            references: [usePage({ data: data, pageData: declaration })],
           }
         : {
             name: declaration.name,
@@ -67,13 +67,13 @@ function useReference(type: TTypeAny, data: TData): TType {
       const { types } = type as TTypeUnion;
       const result = types.map((item) => useReference(item, data));
       const names = result.map((item) => item.name).join("|");
-      const references = result.map((item) => item.reference);
+      const references = result.map((item) => item.references);
       const referencesUnique = uniqBy(references, "name");
       return referencesUnique
         ? {
             name: names,
             variant: "reference",
-            reference: referencesUnique[0],
+            references: referencesUnique,
           }
         : {
             name: names,
