@@ -1,7 +1,10 @@
 export interface TPageData {
   id: number;
   name: string;
-  flags: object;
+  flags: {
+    isOptional?: boolean;
+    isConst?: boolean;
+  };
   kindString?:
     | "Module"
     | "Namespace"
