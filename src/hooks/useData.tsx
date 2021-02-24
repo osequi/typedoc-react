@@ -9,7 +9,8 @@ import { useFolders, useTitle, useLink, TData } from ".";
  */
 export function useData(data: TData): TMenuItem[] {
   const foldersList = flattenDeep(useFolders(data));
-  return parseFolders(foldersList);
+  const foldersListSorted = foldersList.sort((a, b) => a > b);
+  return parseFolders(foldersListSorted);
 }
 
 function parseFolders(folders: string[]): TMenuItem[] {

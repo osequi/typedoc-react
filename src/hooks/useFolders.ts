@@ -6,7 +6,6 @@ import { TData } from ".";
  */
 export function useFolders(data: TData): string[] {
   const { children } = data;
-
   return uniq(
     compact(
       children.map((item) => {
